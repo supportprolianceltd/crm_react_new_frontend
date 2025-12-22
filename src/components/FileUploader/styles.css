@@ -1,0 +1,152 @@
+.upload-area {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.file-preview-container {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.preview-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.image-preview-container {
+  width: 100%;
+  max-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.file-preview-image {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  height: 50px !important;
+  width: 50px !important;
+}
+
+.document-icon-container {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+.document-icon {
+  width: 48px;
+  height: 48px;
+}
+
+.pdf-icon {
+  color: #e53e3e;
+}
+
+.word-icon {
+  color: #2b579a;
+}
+
+.file-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+  text-align: center;
+}
+
+.file-name {
+  font-weight: 500;
+  color: #334155;
+  word-break: break-word;
+  max-width: 100%;
+}
+
+.file-size {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.remove-file-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.remove-file-btn:hover {
+  background: #7226ff;
+}
+
+.remove-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 30px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: none !important;
+}
+
+.upload-label:hover {
+  background-color: #fff;
+}
+
+.upload-icon {
+  width: 40px;
+  height: 40px;
+  color: #7226ff;
+}
+
+.file-types {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.error-message {
+  color: #dc2626;
+  font-size: 0.9rem;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.file-input {
+  display: none;
+}

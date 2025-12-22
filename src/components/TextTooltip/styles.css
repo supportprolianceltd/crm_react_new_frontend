@@ -1,0 +1,20 @@
+/* components/TextTooltip.css */
+.text-tooltip {
+  /* Base styles already in inline, but can add more here if needed */
+  pointer-events: none; /* Prevent interference with mouse events */
+}
+
+/* Optional: Add custom animations or themes */
+.text-tooltip h4 {
+  text-align: left;
+}
+
+.text-tooltip .tooltip-details div {
+  text-align: left;
+}
+
+/* Ensure it doesn't overflow viewport */
+.text-tooltip {
+  max-height: 80vh;
+  overflow-y: auto;
+}

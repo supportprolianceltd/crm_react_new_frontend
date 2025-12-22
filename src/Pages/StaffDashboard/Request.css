@@ -1,0 +1,64 @@
+/* Submenu-staff styles */
+.has-submenu-staff-staff {
+    position: relative;
+}
+
+.has-submenu-staff-staff .menu-item-wrapper {
+    margin-bottom: 0;
+}
+
+.submenu-staff {
+    background-color: #291d58 !important;
+    margin-top: 0;
+    max-height: 100% !important;
+    height: fit-content !important;
+    list-style: none;
+    overflow: hidden;
+    opacity: 1 !important;
+    transition: all 0.3s ease;
+}
+
+.submenu-staff li {
+    background-color: none !important;
+}
+
+.submenu-staff-item {
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.submenu-staff-item a {
+    color: #6b7280;
+    transition: color 0.2s;
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+}
+
+.submenu-staff-item:hover a,
+.submenu-staff-item.active a {
+    color: #3b82f6;
+    background-color: #f0f7ff;
+}
+
+.submenu-staff-item.active {
+    font-weight: 500;
+}
+
+/* Adjust the main menu item when it has submenu-staff */
+.has-submenu-staff-staff.active>.menu-item-wrapper>a {
+    color: #3b82f6;
+    font-weight: 500;
+}
+
+/* Animation for submenu-staff */
+.submenu-staff {
+    max-height: 0;
+    opacity: 0;
+}
+
+.has-submenu-staff-staff.open .submenu-staff {
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 0.5rem;
+}

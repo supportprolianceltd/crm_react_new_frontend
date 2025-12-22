@@ -1,0 +1,38 @@
+.compliance-head-table {
+  display: grid;
+  grid-template-columns: repeat(7, 7fr);
+  justify-content: start !important;
+  font-size: 12px;
+  align-items: center;
+  gap: 20px;
+}
+
+.compliance-table {
+  padding: 10px;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  font-size: 13px;
+}
+
+.compliance-table-td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  font-size: 13px;
+}
+
+.compliance-table-th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  font-size: 13px;
+}
+
+.log-desc-table {
+  padding: 10px 0;
+}

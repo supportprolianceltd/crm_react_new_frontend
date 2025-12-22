@@ -1,0 +1,140 @@
+.leave-header {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 16px;
+    margin-bottom: 8px;
+}
+
+.leave-header .header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: #2b2b3f;
+    user-select: none;
+}
+
+.leave-header .header-left h2 {
+    color: #372580;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.leave-header+p {
+    margin-top: 8px;
+    margin-bottom: 18px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 26px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+@media (max-width: 480px) {
+    .leave-header .header-left h2 {
+        font-size: 18px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* Approve button - purple gradient */
+.btn-approve {
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 13px;
+    color: #fff;
+    background-color: #8B4CFF;
+    box-shadow: 0 10px 30px rgba(122, 44, 255, 0.12);
+    transition: transform .12s ease, box-shadow .12s ease;
+    min-width: 180px;
+    width: 100%;
+}
+
+.btn-approve:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 40px rgba(122, 44, 255, 0.14);
+}
+
+/* Decline button - soft lilac filled */
+.btn-decline {
+    padding: 12px 26px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 13px;
+    background-color: #E9DDFF;
+    color: #620DFF;
+    transition: transform .12s ease;
+    min-width: 180px;
+    width: 100%;
+}
+
+.btn-decline:hover {
+    transform: translateY(-2px);
+}
+
+/* Contact button - white with subtle border */
+.btn-contact {
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #EBECF0;
+    background: #fff;
+    color: #5B616D;
+    font-weight: 500;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background .12s ease, transform .12s ease;
+    min-width: 180px;
+    width: 100%
+}
+
+.btn-contact:hover {
+    background: #faf9fb;
+    transform: translateY(-1px);
+}
+
+/* Loading container */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    min-height: 300px;
+}
+
+.loading-spinner {
+    margin-bottom: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.Main-DB-Envt {
+    animation: fadeIn 0.3s ease-out;
+}

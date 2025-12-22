@@ -1,0 +1,327 @@
+/* OVERVIEW PAGE */
+
+.overview-container {
+    padding: 1.5rem;
+    background: #f7f7fb;
+    min-height: 100vh;
+}
+
+/* Header */
+.overview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 600px) {
+    .overview-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+}
+
+.search-bar {
+    padding: 0.6rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 280px;
+}
+
+/* Stats Cards */
+.employees-list-statistics-cards-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.employees-list-statistics-card {
+    flex: 1;
+    background: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    min-width: 200px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.employees-list-statistics-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: #372580;
+}
+
+.employees-list-statistics-count {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a1a66;
+    margin: 0.3rem 0;
+}
+
+.employees-list-statistics-percentage {
+    font-size: 0.85rem;
+}
+
+.employees-list-statistics-percentage.positive {
+    color: green;
+}
+
+.employees-list-statistics-percentage.negative {
+    color: red;
+}
+
+.employees-list-statistics-percentage.neutral {
+    color: gray;
+}
+
+/* Content Sections */
+.overview-sections {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.overview-card {
+    flex: 1;
+    background: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    min-width: 300px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.overview-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.overview-card-header h3 {
+    margin: 0;
+}
+
+.overview-card-header a {
+    font-size: 0.85rem;
+    color: #372580;
+    text-decoration: none;
+}
+
+/* Onboarding List */
+.onboarding-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.onboarding-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.onboarding-list .name {
+    font-weight: 500;
+}
+
+.onboarding-list .time {
+    font-size: 0.8rem;
+    color: gray;
+}
+
+.status {
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.status.in-progress {
+    background: #e8f8ec;
+    color: #2d8a4f;
+}
+
+.status.completed {
+    background: #f0f0f0;
+    color: #555;
+}
+
+/* Notifications */
+.notifications-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notifications-list li {
+    padding: 0.7rem 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .employees-list-statistics-cards-container {
+        flex-direction: column;
+    }
+
+    .overview-sections {
+        flex-direction: column;
+    }
+}
+
+
+
+
+/* ONBOARDING PAGE */
+
+/* Onboarding specific styles */
+.onboarding-list-page {
+    padding: 20px;
+}
+
+.onboarding-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+}
+
+.onboarding-list-description {
+    font-size: 14px;
+    color: #6b7280;
+    margin: 0;
+}
+
+.onboarding-list-statistics-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.onboarding-list-statistics-card {
+    flex: 1;
+    background: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    min-width: 200px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.onboarding-list-statistics-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: #372580;
+}
+
+.onboarding-list-statistics-count {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a1a66;
+    margin: 0.3rem 0;
+}
+
+.requests-status-percentage {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.requests-status-percentage.positive {
+    color: #10b981;
+}
+
+.requests-status-percentage.negative {
+    color: #ef4444;
+}
+
+.requests-status-percentage.neutral {
+    color: #6b7280;
+}
+
+.triangle-up,
+.triangle-down {
+    font-size: 10px;
+}
+
+/* Completion bar styles */
+.completion-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.completion-bar {
+    width: 80px;
+    height: 8px;
+    background-color: #e5e7eb;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.completion-progress {
+    height: 100%;
+    background-color: #10b981;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.completion-text {
+    font-size: 12px;
+    color: #6b7280;
+    min-width: 35px;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .onboarding-list-statistics-cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .onboarding-list-statistics-cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    .onboarding-list-page {
+        padding: 16px;
+    }
+
+    .onboarding-list-header {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .onboarding-list-statistics-cards-container {
+        gap: 12px;
+    }
+
+    .onboarding-list-statistics-card {
+        padding: 16px;
+    }
+
+    .onboarding-list-statistics-count {
+        font-size: 24px;
+    }
+
+    .onboarding-list-title {
+        font-size: 20px;
+    }
+
+    .completion-bar {
+        width: 60px;
+    }
+}

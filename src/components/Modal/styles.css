@@ -1,0 +1,730 @@
+/* components/Modal/Modal.css */
+
+/* Base overlay styles */
+.modal-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  z-index: 1000 !important;
+  padding: 20px !important;
+}
+
+/* PDF-style backdrop for large modals - EXACT MATCH */
+.pdf-modal-backdrop {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: rgba(0, 0, 0, 0.6) !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  z-index: 2000 !important;
+  overflow-y: auto !important;
+}
+
+/* Default small modal */
+.modal-content {
+  z-index: 5000 !important;
+  background-color: white !important;
+  border-radius: 8px !important;
+  width: 100% !important;
+  max-width: 500px !important;
+  max-height: 90vh !important;
+  min-height: 200px !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  margin: auto !important;
+}
+
+/* PDF-style large modal content - EXACT MATCH */
+.pdf-modal-content {
+  background: #fff !important;
+  width: 90% !important;
+  max-width: 1200px !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3) !important;
+  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3) !important;
+  -moz-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3) !important;
+  position: relative !important;
+  z-index: 1000 !important;
+  height: 100% !important;
+  overflow-y: auto !important;
+}
+
+/* Header styles */
+.modal-header {
+  padding: 16px 20px 8px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-shrink: 0 !important;
+  gap: 12px !important;
+}
+
+/* PDF-style header - EXACT MATCH */
+.pdf-modal-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  border-bottom: 1px solid #e7e2f7 !important;
+  padding: 10px 20px !important;
+  gap: 20px !important;
+}
+
+/* Title styles */
+.modal-title {
+  margin: 0 !important;
+  font-size: 1.125rem !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  flex: 1 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+/* PDF-style title - EXACT MATCH */
+.pdf-modal-title {
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  margin: 0 !important;
+}
+
+/* PPf-D-1 container - EXACT MATCH */
+.PPf-D-1 {
+  position: relative !important;
+}
+
+/* PPf-D-2 container - EXACT MATCH */
+.PPf-D-2 {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+/* Close button styles */
+.modal-close-button {
+  background: none !important;
+  border: none !important;
+  font-size: 1.5rem !important;
+  cursor: pointer !important;
+  color: #6b7280 !important;
+  padding: 4px !important;
+  border-radius: 4px !important;
+  transition: all 0.2s !important;
+  flex-shrink: 0 !important;
+  width: 32px !important;
+  height: 32px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.modal-close-button:hover {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  color: #374151 !important;
+}
+
+/* PDF-style close icon - EXACT MATCH */
+.close-icon {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 25px !important;
+  height: 25px !important;
+  border: 1px solid transparent !important;
+  border-radius: 5px !important;
+  cursor: pointer !important;
+  user-select: none !important;
+  transition: all 0.3s ease-in-out !important;
+  opacity: 0.7 !important;
+}
+
+.close-icon svg {
+  width: 70% !important;
+}
+
+.close-icon:hover {
+  border-color: #e7e2f7 !important;
+  opacity: 1 !important;
+}
+
+/* Header actions container */
+.modal-header-actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin-right: 10px !important;
+  flex-shrink: 0 !important;
+}
+
+/* PDF-style header actions - EXACT MATCH */
+.PPf-D-2 {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  flex-shrink: 0 !important;
+}
+
+/* Header action buttons */
+.header-action-button {
+  padding: 6px 12px !important;
+  border-radius: 6px !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  border: 1px solid transparent !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 4px !important;
+  white-space: nowrap !important;
+  background: none !important;
+  color: #6b7280 !important;
+  min-width: 70px !important;
+  height: 32px !important;
+}
+
+.header-action-button:hover {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  color: #374151 !important;
+  border-color: #d1d5db !important;
+}
+
+.header-action-button.accept {
+  color: #059669 !important;
+  border-color: #059669 !important;
+}
+
+.header-action-button.accept:hover {
+  background-color: rgba(5, 150, 105, 0.1) !important;
+}
+
+.header-action-button.reject {
+  color: #dc2626 !important;
+  border-color: #dc2626 !important;
+}
+
+.header-action-button.reject:hover {
+  background-color: rgba(220, 38, 38, 0.1) !important;
+}
+
+.header-action-button.download {
+  color: #3b82f6 !important;
+  border-color: #3b82f6 !important;
+}
+
+.header-action-button.download:hover {
+  background-color: rgba(59, 130, 246, 0.1) !important;
+}
+
+/* Responsive adjustments for header actions */
+@media (max-width: 575.98px) {
+  .modal-header-actions {
+    gap: 6px !important;
+    margin-right: 8px !important;
+  }
+
+  .header-action-button {
+    padding: 4px 8px !important;
+    font-size: 0.8rem !important;
+    min-width: 60px !important;
+    height: 28px !important;
+  }
+
+  .PPf-D-2 {
+    gap: 8px !important;
+  }
+
+  /* On mobile, stack header actions vertically if needed */
+  .pdf-modal-header {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .PPf-D-2 {
+    justify-content: space-between !important;
+    margin-top: 8px !important;
+  }
+
+  .modal-header-actions {
+    order: 1 !important;
+    width: 100% !important;
+    justify-content: flex-start !important;
+    margin-right: 0 !important;
+    margin-bottom: 4px !important;
+  }
+}
+
+/* Body styles */
+.modal-body {
+  padding: 0 20px 20px !important;
+  flex: 1 !important;
+  overflow: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* PDF-style main content - EXACT MATCH */
+.pdf-modal-content-main {
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* PDF iframe/viewer - EXACT MATCH */
+.PDF-ViewImH {
+  position: relative !important;
+  width: 100% !important;
+  height: 620px !important;
+  border: none !important;
+}
+
+/* Message for small modals */
+.modal-message {
+  color: #4b5563 !important;
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 16px !important;
+}
+
+/* Footer (small modals only) */
+.modal-footer {
+  display: flex !important;
+  justify-content: flex-end !important;
+  gap: 8px !important;
+  padding: 16px 20px 20px !important;
+  border-top: 1px solid #e5e7eb !important;
+  flex-shrink: 0 !important;
+  background-color: #fafafa !important;
+  flex-wrap: wrap !important;
+}
+
+.modal-button {
+  padding: 8px 16px !important;
+  border-radius: 6px !important;
+  font-weight: 500 !important;
+  font-size: 0.875rem !important;
+  cursor: pointer !important;
+  transition: all 0.2s !important;
+  min-width: 80px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+}
+
+.modal-button-cancel {
+  background-color: #f3f4f6 !important;
+  color: #4b5563 !important;
+  border: 1px solid #e5e7eb !important;
+}
+
+.modal-button-cancel:hover {
+  background-color: #e5e7eb !important;
+}
+
+.modal-button-confirm {
+  background-color: #7226ff !important;
+  color: white !important;
+  border: 1px solid #7226ff !important;
+}
+
+.modal-button-confirm:hover {
+  background-color: #8d7fa9 !important;
+}
+
+.modal-button:disabled {
+  opacity: 0.7 !important;
+  cursor: not-allowed !important;
+}
+
+.loading-spinner {
+  display: inline-block !important;
+  width: 12px !important;
+  height: 12px !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 50% !important;
+  border-top-color: white !important;
+  animation: spin 1s ease-in-out infinite !important;
+  margin-right: 6px !important;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg) !important;
+  }
+}
+
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   ======================================== */
+
+/* Extra Small Devices (phones, < 576px) */
+@media (max-width: 575.98px) {
+  .modal-overlay,
+  .pdf-modal-backdrop {
+    padding: 10px !important;
+  }
+
+  .modal-content {
+    width: 95% !important;
+    max-width: none !important;
+    margin: 5px !important;
+    border-radius: 12px !important;
+    max-height: 95vh !important;
+  }
+
+  .pdf-modal-content {
+    width: 95% !important;
+    max-width: none !important;
+  }
+
+  .pdf-modal-header {
+    padding: 8px 12px !important;
+    gap: 12px !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .PPf-D-2 {
+    justify-content: flex-end !important;
+    gap: 8px !important;
+  }
+
+  .pdf-modal-title {
+    font-size: 16px !important;
+    text-align: center !important;
+  }
+
+  .close-icon {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .PDF-ViewImH {
+    height: 400px !important;
+  }
+
+  .modal-header {
+    padding: 12px 16px 6px !important;
+    gap: 8px !important;
+  }
+
+  .modal-title {
+    font-size: 1rem !important;
+  }
+
+  .modal-close-button {
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 1.25rem !important;
+  }
+
+  .modal-body {
+    padding: 0 16px 16px !important;
+  }
+
+  .modal-message {
+    font-size: 0.9rem !important;
+    margin-bottom: 12px !important;
+  }
+
+  .modal-footer {
+    padding: 12px 16px 16px !important;
+    gap: 6px !important;
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  .modal-button {
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 10px 16px !important;
+    font-size: 0.9rem !important;
+    min-width: auto !important;
+  }
+}
+
+/* Small Devices (tablets, ≥ 576px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .pdf-modal-backdrop {
+    padding: 15px !important;
+  }
+
+  .pdf-modal-content {
+    max-width: 800px !important;
+  }
+
+  .PDF-ViewImH {
+    height: 500px !important;
+  }
+
+  .pdf-modal-header {
+    padding: 10px 16px !important;
+  }
+
+  .modal-content {
+    max-width: 500px !important;
+    max-height: 85vh !important;
+  }
+}
+
+/* Medium Devices (small laptops, ≥ 768px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .pdf-modal-content {
+    max-width: 900px !important;
+  }
+
+  .PDF-ViewImH {
+    height: 550px !important;
+  }
+
+  .pdf-modal-header {
+    padding: 12px 20px !important;
+  }
+
+  .modal-content {
+    max-width: 500px !important;
+    max-height: 80vh !important;
+  }
+}
+
+/* Large Devices (laptops, ≥ 992px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .pdf-modal-content {
+    max-width: 1000px !important;
+  }
+
+  .PDF-ViewImH {
+    height: 600px !important;
+  }
+
+  .modal-content {
+    max-width: 550px !important;
+    max-height: 75vh !important;
+  }
+}
+
+/* Extra Large Devices (desktops, ≥ 1200px) */
+@media (min-width: 1200px) {
+  .pdf-modal-content {
+    max-width: 1200px !important;
+  }
+
+  .PDF-ViewImH {
+    height: 620px !important;
+  }
+
+  .pdf-modal-header {
+    padding: 12px 24px !important;
+  }
+
+  .modal-content {
+    max-width: 600px !important;
+    max-height: 70vh !important;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  .modal-content {
+    max-height: 95vh !important;
+    margin: 5px !important;
+  }
+
+  .PDF-ViewImH {
+    height: 300px !important;
+  }
+
+  .pdf-modal-header {
+    padding: 8px 12px !important;
+  }
+}
+
+/* High DPI displays (Retina) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .pdf-modal-content {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25) !important;
+  }
+}
+
+/* Preview Modal Styles */
+.preview-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.preview-modal-content {
+  background: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.preview-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #eee;
+  background: #f8f9fa;
+}
+
+.preview-modal-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.preview-modal-header .close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.preview-modal-header .close-button:hover {
+  background: #e9ecef;
+  color: #333;
+}
+
+.preview-modal-body {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: calc(90vh - 80px);
+  overflow: auto;
+}
+
+.preview-image {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+.preview-pdf {
+  border: none;
+  border-radius: 4px;
+}
+
+.preview-other {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.preview-other .file-icon {
+  margin-bottom: 16px;
+  color: #6c757d;
+}
+
+.preview-other p {
+  margin-bottom: 20px;
+  color: #6c757d;
+}
+
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.download-button:hover {
+  background: #0056b3;
+  color: white;
+  text-decoration: none;
+}
+
+/* Certificate Upload Container */
+.certificate-upload-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.preview-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.preview-button:hover {
+  background: #218838;
+}
+
+.preview-button-small {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: background-color 0.2s;
+}
+
+.preview-button-small:hover {
+  background: #545b62;
+}
+
+.file-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.view-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.view-link:hover {
+  text-decoration: underline;
+}

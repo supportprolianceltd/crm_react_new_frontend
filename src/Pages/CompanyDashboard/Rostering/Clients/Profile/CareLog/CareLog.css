@@ -1,0 +1,414 @@
+/* PPOlaj-SSde-TopSSUB  */
+
+.PPOlaj-SSde-TopSSUB.NoAbsuls {
+  position: relative !important;
+  top: 0px !important;
+}
+
+/* Gllad-Sec */
+.Gllad-Sec {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 10px;
+  grid-template-rows: auto;
+  margin-top: 15px;
+}
+
+.Gllad-Card {
+  position: relative;
+  width: 100%;
+  min-height: 100px;
+  border-radius: 10px;
+  border: 1px solid #e7e2f7;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.Gllad-Card:hover {
+  background-color: #f7f5ff;
+}
+
+.Gllad-Card.active {
+  background-color: #f7f5ff;
+  border-color: #7226ff;
+}
+
+.Gths-1 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.Gths-11 {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.Gths-11 img,
+.Gths-11 b {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #ece8fd;
+  color: #7226ff;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.Gths-11 h3 {
+  position: relative;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.GthStatus {
+  position: relative;
+  font-size: 10px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 30px;
+  background-color: #f7f5ff;
+}
+
+.GthStatus.completed {
+  background-color: #e8fbe5 !important;
+  color: #2a9919 !important;
+}
+.GthStatus.missed {
+  background-color: #feecec !important;
+  color: #e92020 !important;
+}
+
+.Gths-2 {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.Gths-2 p {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #5b616d;
+  font-size: 13px;
+}
+.Gths-2 p span {
+  position: relative;
+  width: 23px;
+  height: 23px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #fef2cd;
+  color: #ca9802;
+}
+
+.Gths-2 p span svg {
+  width: 60%;
+}
+
+.Gths-3 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.Gths-3 p {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #5b616d;
+  font-size: 13px;
+}
+
+.Gths-3 p span {
+  position: relative;
+  width: 23px;
+  height: 23px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #e9ebf0;
+  color: #0a0c11;
+}
+
+.Gths-3 p span svg {
+  width: 60%;
+}
+
+/* CareLog.css */
+.detail-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail-header h2 {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close-button svg {
+  width: 18px;
+  height: 18px;
+}
+
+.client-info {
+  margin-bottom: 20px;
+}
+
+.client-name {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.client-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #666;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.client-meta p {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #5b616d;
+  font-size: 13px;
+}
+
+.client-meta p span {
+  position: relative;
+  width: 23px;
+  height: 23px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #e9ebf0;
+  color: #0a0c11;
+}
+
+.client-meta p span svg {
+  width: 60%;
+}
+
+.notes-section {
+  margin-bottom: 20px;
+}
+
+.notes-section h4 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0a0c11;
+}
+
+.notes-text {
+  margin: 0;
+  white-space: pre-wrap;
+  font-size: 14px;
+  color: #5b616d;
+}
+
+/* GGtg-Btns */
+
+.GGtg-Btns {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.GGtg-Btns button {
+  position: relative;
+  width: auto;
+  height: auto;
+  padding: 5px 13px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 30px;
+  background-color: #ece8fd;
+  color: #7226ff;
+  user-select: none;
+  cursor: pointer;
+  border: 1px solid #7226ff;
+}
+.GGtg-Btns button:hover {
+  background-color: #e1dcf7;
+}
+
+.GGtg-Btns button svg {
+  width: 13px;
+}
+
+.Addd-Comnt-Sec {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+.Addd-Comnt-Sec h3 {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.Addd-Comnt-Sec textarea {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border: 1px solid #e7e2f7;
+  border-radius: 10px;
+  padding: 10px;
+  height: 100px;
+  resize: none;
+  font-size: 13px;
+}
+.Addd-Comnt-Sec .GGtg-Btns {
+  margin-top: 5px !important;
+}
+.Addd-Comnt-Sec textarea:focus {
+  border: 2px solid #cfb8fa !important;
+}
+.comment-section {
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #f7f5ff;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.carer-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.comment-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-author {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.comment-time {
+  font-size: 11px;
+  color: #666;
+}
+
+.comment-text {
+  margin: 0;
+  font-size: 13px;
+}
+
+.comment-section .edit-button {
+  margin-top: 5px;
+}
+
+.edit-button svg {
+  width: 13px;
+}
+
+/* Gtbs-OOls */
+
+.Gtbs-OOls {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.swiTch-Btn svg {
+  width: 20px !important;
+}
+
+.Nhns-TRs {
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  cursor: pointer;
+}
+
+.Nhns-TRs:hover {
+  background-color: #f7f5ff;
+}

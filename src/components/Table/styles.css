@@ -1,0 +1,180 @@
+.table-container {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 16px;
+  margin-top: 1rem;
+  overflow: hidden;
+  background-color: #fff;
+  padding-bottom: 1rem;
+  /* border: 1px solid #EBECF0; */
+}
+
+.adjust-table Table{
+  margin-left: -10px;
+  font-size: 10px !important;
+  
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-container th {
+  color: #4c1d95;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #ebecf0;
+  white-space: nowrap;
+}
+
+.table-container td {
+  padding: 16px;
+  /* color: #1f2937; */
+  font-size: 13px;
+  border-bottom: 1px solid #ebecf0;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.clickable-row {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.clickable-row:hover {
+  background-color: #f9fafb;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+  .table-container {
+    overflow-x: auto;
+    display: block;
+  }
+}
+
+.user-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.status.active {
+  background: #d4f7cf !important;
+  color: #35c220 !important;
+}
+
+.actions {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Improved Pagination Styles - Single Line */
+.pagination {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between !important;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem !important;
+  flex-shrink: 0;
+  width: auto !important;
+}
+
+.pagination-extra {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.pagination button {
+  border: 1px solid #ddd;
+  background: white;
+  color: #4c1d95;
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination button.active {
+  background-color: #7c3aed;
+  color: white;
+  border-color: #7c3aed;
+}
+
+.pagination-extra span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #5b616d;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.pagination-extra input {
+  width: 50px;
+  padding: 6px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.pagination-extra select {
+  padding: 6px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  color: #5b616d;
+}
+
+@media (max-width: 768px) {
+  .pagination {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .pagination-controls {
+    order: 1;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .pagination-extra {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,530 @@
+/* Messages-Secs */
+
+.Messages-Secs{
+    position: relative;
+    width: 100%;
+    height: 94vh;
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+
+.Messg-Part-1{
+    position: relative;
+    width: 350px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.Messg-Part-1-Top{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.Messg-Part-1-Top h3{
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.Mmesa-Btns{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.Mmesa-Btns span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #f7f5ff;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.Mmesa-Btns span svg{
+    width:55%;
+}
+.Mmesa-Btns span:hover{
+   background-color: #e6e0fe;
+   color: #7226FF;
+}
+
+.Messg-Part-1-Main{
+    position: relative;
+    width: 100%;
+    height: 82vh;
+}
+
+
+.kmj-Header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 100%;
+    padding: 0px 20px;
+}
+
+.kmj-Header svg{
+    width: 11px;
+}
+
+.kmj-Header span{
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    opacity: 0.7;
+}
+
+.kmj-Header b{
+    font-size: 9px;
+    font-weight: 400;
+      background-color: #e6e0fe;
+    color: #7226FF;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 30px;
+    padding: 3px 7px;
+    line-height: 100%;
+}
+
+
+/* Chatth-Ul */
+
+.Chatth-Ul{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.All-Caht-Li{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 15px;
+    padding: 10px 20px;
+}
+
+.OOlks-LINO{
+    position: relative;
+    padding: 0px 20px;
+}
+.Chatth-Ul .All-Caht-Li{
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.All-Caht-Li:hover{
+    background-color: #f7f5ff;
+}
+.All-Caht-Li-1{
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+.All-Caht-Li-1 img,
+.All-Caht-Li-1 span{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    background-color: #F0E9FF;
+    font-weight: 600;
+    font-size:18px;
+    text-transform: uppercase;
+}
+
+.message-Presnt {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    background-color: #bfbfbf;
+    z-index: 10;
+    border-radius: 50%;
+    bottom: 5px;
+    right: -1px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.All-Caht-Li-2{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.All-Caht-Li-2-Main{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.All-Caht-Li-2-Main h3{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+}
+
+.All-Caht-Li-2-Main h3 b{
+    font-size: 13px;
+    font-weight: 600;
+     width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;   
+    line-clamp: 1; 
+    -webkit-box-orient: vertical;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.All-Caht-Li-2-Main h3 span{
+    font-size: 10px;
+    font-weight: 400;
+    opacity: 0.6;
+}
+
+
+
+.All-Caht-Li-2-Main p{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    /* margin-top: 5px; */
+}
+
+.All-Caht-Li-2-Main p b{
+    font-size: 10px;
+    font-weight: 400;
+     width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;   
+    line-clamp: 1; 
+    -webkit-box-orient: vertical;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    opacity: 0.8;
+}
+
+.Icomn-Part{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.Icomn-Part span.Sppan-COunt{
+     position: relative;
+    width: auto;
+    min-width: 12px;
+    height: 12px;
+    padding: 0px 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius:30px;
+    background-color: #F042FF;
+    font-size: 8px;
+    color: #fff;
+}
+
+.Icomn-Part span.Sppan-Icon{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    opacity: 0.5;
+}
+.Icomn-Part span.Sppan-Icon svg{
+    margin-left: -7px;
+}
+.Icomn-Part span.Sppan-Icon svg{
+    width: 11px;
+}
+
+
+.MM-OIkaiks{
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+}
+
+.MM-OIkaiks-Top{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 10px 20px;
+    padding-top: 5px;
+}
+
+
+.See_All_SttaG{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding:10px 20px;
+    display: block;
+}
+
+.See_All_SttaG_Main{
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #f7f5ff;
+    padding: 10px 10px;
+    border-radius: 8px;
+}
+.See_All_SttaG_LIst_Top{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.See_All_SttaG_LIst{
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: 315px;
+    margin-top: 5px;
+    padding-bottom: 20px;
+}
+
+.See_All_SttaG_LIst ul.Chatth-Ul{
+    padding: 0px !important;
+    margin: 0px !important;
+    margin-top: 0px !important;
+    gap: 5px !important;
+}
+
+.See_All_SttaG_LIst ul.Chatth-Ul li.All-Caht-Li{
+      padding:8px 10px !important;
+    margin: 0px !important;
+    gap: 8px !important;
+    border-radius: 10px;
+}
+
+
+.See_All_SttaG_LIst ul.Chatth-Ul li.All-Caht-Li .All-Caht-Li-1 img,
+.See_All_SttaG_LIst ul.Chatth-Ul li.All-Caht-Li .All-Caht-Li-1 span{
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 13px !important;
+}
+
+.See_All_SttaG_LIst ul.Chatth-Ul li.All-Caht-Li .All-Caht-Li-2-Main p{
+    margin-top: 0px !important;
+}
+.See_All_SttaG_LIst ul.Chatth-Ul li.All-Caht-Li .All-Caht-Li-2-Main h3 b{
+   font-size: 11px !important;
+}
+
+
+.See_All_SttaG_LIst ul.Chatth-Ul li.All-Caht-Li:hover{
+    background-color: #e6e0fe !important;
+    color: #7226FF !important;
+}
+
+
+.No-results{
+    font-size: 10px;
+    font-style: italic;
+}
+
+
+
+/* Messg-Part-2 */
+
+.Messg-Part-2{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    padding-left: 10px;
+}
+
+.Messg-Part-2-Main{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #f7f5ff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.Messg-Part-2-Main-Top{
+    position: relative;
+    width: 100%;
+    height: 70px;
+    background-color: inherit;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.Messg-Part-2-Main-Top-Box{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 50px;
+     box-shadow: 0 4px 8px rgba(94, 86, 139, 0.05); 
+  -webkit-box-shadow: 0 4px 8px rgba(94, 86, 139, 0.05); 
+  -moz-box-shadow: 0 4px 8px rgba(94, 86, 139, 0.05); 
+  padding: 5px 15px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+}
+
+.Messg-Part-2-Main-Top-Box .All-Caht-Li{
+    padding: 0px !important;
+    gap: 5px !important;
+    background-color: transparent !important;
+}
+
+.Messg-Part-2-Main-Top-Box .All-Caht-Li-2-Main p{
+    margin: 0px !important;
+}
+.Messg-Part-2-Main-Top-Box .All-Caht-Li-2-Main p b{
+    font-size: 9px !important;
+}
+.Messg-Part-2-Main-Top-Box .All-Caht-Li-2-Main h3{
+    line-height: 100% !important;
+}
+.Messg-Part-2-Main-Top-Box .All-Caht-Li-2-Main h3 b{
+    font-size: 12px !important;
+}
+.Messg-Part-2-Main-Top-Box .All-Caht-Li .All-Caht-Li-1 img,
+.Messg-Part-2-Main-Top-Box .All-Caht-Li .All-Caht-Li-1 span{
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 13px !important;
+}
+
+.message-Presnt{
+    width: 8px !important;
+    height: 8px !important;
+}
+
+/* Messg-Part-2-Main-Mannso */
+
+.Messg-Part-2-Main-Mannso{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.Messg-Part-2-Main-Mannso .ppol-Messaging-Apss{
+    position: relative !important; 
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 100 !important;
+    border-radius: 0px  !important;
+    background-color: transparent  !important;
+}
+
+
+
+.Messg-Part-2-Main-Mannso  .recivvv-Chatt-Box p{
+    background-color: #fff !important;
+}
+
+.Messg-Part-2-Main-Mannso  .recivvv-Chatt-Box p::before{
+    content: '';
+    position: absolute;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px solid #fff !important;
+    border-bottom: 10px solid transparent;
+}
+
+
+
+
+/* NOn-Ujs */
+
+.NOn-Ujs{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 5px;
+    margin-top: 30px;
+}
+
+.NOn-Ujs img{
+    max-width: 50px;
+}
+.NOn-Ujs p{
+    opacity: 0.7;
+}
+.lol-NOn-Ujs{
+    position: relative;
+    width: 100%;
+    height:100%;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.lol-NOn-Ujs img{
+    max-width: 200px;
+}
+
+.lol-NOn-Ujs p{
+    opacity: 0.7;
+}

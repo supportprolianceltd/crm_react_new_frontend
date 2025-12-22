@@ -1,0 +1,770 @@
+/* Roster-Mman-Pag */
+
+.Roster-Mman-Pag{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.RosterTop{
+    position: sticky;
+    top: 60px;
+    z-index: 100;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    border-top-left-radius: 5px;
+    border-bottom: 1px solid #e8e8e9;
+    display: flex;
+    align-items: center;
+}
+/* RosterTop-content */
+
+.RosterTop-content{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.TTo-Rost-1{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: auto;
+    gap: 10px;
+}
+
+.TTo-Rost-1 .oIK-Btns{
+    width: auto !important;
+    display: inline-flex !important;
+}
+
+.TTo-Rost-1 .oIK-Search input{
+    width: 300px !important;
+}
+
+.HHj-IIctgs{
+    position: relative;
+    display:inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.HHj-IIctgs span{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 10px;
+    height: 35px;
+    width: auto;
+    justify-content: center;
+    padding: 0px 10px;
+    border: 1px solid #EBECF0;
+    border-radius: 8px;
+    background-color: #f7f5ff;
+    user-select: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.HHj-IIctgs span svg{
+    width: 13px;
+}
+/* 
+.HHj-IIctgs span:hover{
+   background-color: #ebe6ff;;
+} */
+
+
+.TTo-Rost-2 .cccll-Gbajjs-Main button{
+    height: 35px !important;
+    font-size: 12px !important;
+}
+
+.TTo-Rost-2 .cccll-Gbajjs-Main button svg{
+    width: 14px !important;
+}
+
+
+.Roster-Mman-Pag .dropdown-menu{
+    width: 100% !important;
+}
+
+
+
+
+
+
+.RosterBody{
+    position: relative;
+    height: auto;
+}
+
+
+.Roster-Mman-Pag .Wide-Taxy-Days{
+    width: 300px !important;
+}
+
+.Roster-Mman-Pag .DD-Day{
+   display: block !important;
+   text-align: left !important;
+   padding: 0px !important;
+}
+.Roster-Mman-Pag .GBj-Mainso,
+.Roster-Mman-Pag .Taxy-Days{
+    height: auto !important;
+}
+.Roster-Mman-Pag .Task-Calindees{
+    height: auto !important;
+    background-color: #f7f5ff !important;
+    border-bottom: 1px solid #e8e8e9;
+}
+.Div-DR::before,
+.GBJ-Parts,
+.Roster-Mman-Pag .Div-DR{
+    border-color: #e8e8e9 !important;
+}
+
+.Roster-Mman-Pag .DD-Day,
+.Roster-Mman-Pag  .GBJ-Parts{
+    height: 70px !important;
+}
+
+.Roster-Mman-Pag .DD-Day.top-Uj,
+.Roster-Mman-Pag .GBJ-Parts.top-Uj{
+    height: 40px !important;
+}
+
+.Roster-Mman-Pag .Tol-OPLSA{
+  color: #372580 !important;  
+}
+
+.Roster-Mman-Pag .DD-Day{
+    cursor: auto !important;
+    color: #372580 !important;
+    border: none !important;
+    padding:5px !important;
+}
+
+.Roosth-Gb-S{
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    height: 100%;
+    overflow: hidden;
+    border:1px solid #dedaf6;
+    border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(94, 86, 139, 0.05);
+  -webkit-box-shadow: 0 4px 8px rgba(94, 86, 139, 0.05);
+  -moz-box-shadow: 0 4px 8px rgba(94, 86, 139, 0.05);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+.DDD-Booxs{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.Roosth-Gb-S-Top{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.Roosth-Gb-S-Top h2{
+      display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.Roosth-Gb-S-Sub{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+
+
+.Roosth-Gb-S-Sub h5{
+    font-size: 9px;
+    font-weight: 400;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    line-height: 100%;
+}
+
+.Roosth-Gb-S-Sub h5 svg{
+    width: 9px;
+}
+
+.Roosth-Gb-S-Sub h5 b{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-weight: 400;
+}
+.Roosth-Gb-S-Sub h5 span{
+    color: #8B4CFF !important;
+    background-color: #F0E9FF !important;
+    border-radius: 30px;
+    padding: 4px 6px;
+    font-size: 8px;
+    font-weight: 500;
+       display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    position: relative;
+}
+
+.Roosth-Gb-S-Sub h6{
+    font-size: 9px;
+    width: auto;
+    font-weight: 400;
+}
+
+
+
+.Roster-Mman-Pag  .GGH-TTOpl{
+    position: relative;
+    width: 100%;
+     height: 100%;
+     display: flex;
+     align-items: center;
+}
+.Roster-Mman-Pag  .GGH-TTOpl .Ul-OKik{
+    height: auto !important;
+    gap: 0px !important;
+
+}
+
+.Roster-Mman-Pag  .cccal-BGbss{
+    font-size: 13px !important;
+}
+
+.Roster-Mman-Pag  .GGH-TTOpl .Ul-OKik li:hover{
+    background-color: #fff !important;
+}
+
+.Roster-Mman-Pag  .GGH-TTOpl .Ul-OKik li.WIthBRd-UIK-VBOx{
+    margin-left: 5px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.NGbas-CCads{
+    position: relative;
+    width: 100%;
+}
+
+.NGbas-CCads .Cree-Name{
+       position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.NGbas-CCads h3 span{
+    font-size: 11px !important;
+}
+
+.NGbas-CCads h3 img,
+.NGbas-CCads h3 b{
+    width: 25px !important;
+    height: 25px !important;
+}
+
+.HGh-Tabl-Gbs-Badgs span{
+    font-size: 11px !important;
+}
+
+.HGh-Tabl-Gbs-Badgs span svg{
+    width: 12px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HYH-CCBAGs */
+
+.HYH-CCBAGs{
+    min-height: 100vh !important;
+}
+
+.frg-PPOlas{
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    height: 45px !important;
+    transform: translateY(-50%) !important;
+    top: 50% !important;
+    border-left: 4px solid transparent;
+}
+.frg-PPOlas:hover{
+    z-index: 100;
+}
+
+.dRetask-call-type{
+    position: relative;
+}
+
+.dRetask-call-type svg{
+    width: 13px;
+}
+
+.dRetask-call-type svg.call-icon{
+    width: 14px;
+}
+
+
+.task-name span{
+    font-size: 10px !important;
+}
+
+
+/* rOOcalendar-container */
+
+.rOOcalendar-container{
+    position: absolute;
+    right: -120px;
+}
+
+
+.OUka-DropsDA:nth-child(2n) .Div-DR{
+    background-color: #fff !important;
+}
+
+.DDRgs-DDPaols{
+    position: absolute;
+    width: 100%;
+    min-width: 250px;
+    max-width: 300px;
+    max-height: 300px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+    -webkit-box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+    -moz-box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+    left: 0px;
+    top: 100%;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    user-select: none;
+    cursor: pointer;
+    padding: 10px;
+    color: #372580 !important;
+    z-index: 1000;
+}
+
+.DDRgs-DDPaols:hover{
+    border-color: inherit;
+    background-color: inherit;
+}
+
+.DDRgs-DDPaols h3{
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.UJkas-PPOlas-P{
+    position: relative;
+    width: 100%;
+    height: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.UJkas-PPOlas-P p{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 5px 0px;
+    border-top: 1px solid #ece8fd;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    font-weight: 400 !important;
+    transition: all 0.3s ease-in-out;
+}
+.DDRgs-DDPaols:hover .UJkas-PPOlas-P p{
+    border-color: rgba(255,255,255, 0.9) !important;
+}
+.UJkas-PPOlas-P p b{
+    font-weight: 400;
+    text-align: right;
+}
+
+.sttahs-SPOPSna{
+    position: relative;
+    padding: 3px 8px;
+    background-color: #ece8fd;
+    border-radius: 30px;
+    line-height: 100%;
+    font-size: 9px;
+    font-weight: 500 !important;
+}
+.sttahs-SPOPSna.completed{
+    background-color: #e3ffd8 !important;
+    color: #379911 !important;
+}
+.sttahs-SPOPSna.in-progress{
+    background-color: #fff7d8 !important;
+    color: #d4ad0f !important;
+}
+
+
+
+/* Rooster-SSIde-Sec */
+
+.Rooster-SSIde-Sec{
+    position: fixed;
+    width: 500px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 2000;
+    background-color: #fff;
+     box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+    -webkit-box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+    -moz-box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+}
+
+.Rooster-SSIde-Close{
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    top: 20px;
+    right: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+    z-index: 100;
+}
+
+.Rooster-SSIde-Close svg{
+    width: 60%;
+}
+
+.Rooster-SSIde-Close:hover{
+    background-color: #ece8fd;
+}
+
+
+.Rooster-SSIde-Sec-TOP{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding:30px;
+    padding-bottom: 20px;
+}
+
+.Rooster-SSIde-Sec-TOP h3{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.Rooster-SSIde-Sec-TOP h3 img, 
+.Rooster-SSIde-Sec-TOP h3 b {
+    position: relative;
+    width: 33px;
+    height: 33px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #ece8fd;
+    color: #7226ff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 11px;
+    object-fit: cover;
+    object-position: center;
+}
+.Rooster-SSIde-Sec-TOP h3 a{
+    display: inline-flex;
+    align-items: center;
+}
+.Rooster-SSIde-Sec-TOP h3 a:hover{
+    text-decoration: underline;
+}
+
+.Rooster-SSIde-Sec-TOP p{
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: #5b616d;
+}
+
+
+.Rooster-SSIde-Sec-SSUb-TTO{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 0px 30px;
+    border-bottom: 1px solid #ece8fd;
+}
+
+.Rooster-SSIde-Sec-SSUb-TTO ul{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.Rooster-SSIde-Sec-SSUb-TTO ul li{
+    position: relative;
+    padding: 3px 0px;
+    border-bottom: 2px solid transparent;
+    font-size: 13px;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    color: #5b616d;
+}
+.Rooster-SSIde-Sec-SSUb-TTO ul li:hover{
+    color: #8B4CFF;
+}
+.Rooster-SSIde-Sec-SSUb-TTO ul li.active{
+    color: #8B4CFF;
+    border-color: #8B4CFF;
+    font-weight: 500;
+}
+
+
+/* Rooster-SSIde-Sec-MMMAins */
+
+.Rooster-SSIde-Sec-MMMAins{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 20px 30px;
+    max-height: 500px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Ddelajs-SEcs */
+
+.Ddelajs-SEcs{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Ddelajs-BoXX{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    border: 1px solid #ece8fd;
+    background-color: #f7f5ff;
+    border-radius: 8px;
+}
+
+.Ddelajs-BoXX h3{
+    position: relative;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.Ddelajs-BoXX p{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-top: 1px solid #ece8fd;
+}
+.Ddelajs-BoXX p b{
+    font-weight: 400;
+}
+
+
+.TTThabs-LCLient-MMap{
+    user-select: none;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: all 0.3s ease-in-out;
+}
+
+.TTThabs-LCLient-MMap:hover{
+    color: #7226ff;
+}
+
+
+.TTHtahs-Oaa,
+.kujas-PPOlaujmss{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.UYjayhs-PPolas li{
+    grid-template-columns: 15px 1fr !important;
+}
+
+.Uyjayhjs-PPo{
+    transition: all 0.3s ease-in-out;
+}
+
+.Uyjayhjs-PPo:hover{
+    background-color: #ece8fd;
+}
+
+/* OOLsolso-SSCD */
+
+.OOLsolso-SSCD{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ece8fd;
+}
+
+.OOLsolso-SSCD-1{
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
+.OOLsolso-SSCD-1 svg{
+    width: 17px;
+}
+
+.OOLsolso-SSCD-2{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.OOLsolso-SSCD-2 h3{
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.OOLsolso-SSCD-2 p{
+    font-size: 12px;
+}
+.OOLsolso-SSCD-2 span{
+    font-size: 11px;
+    color: #5b616d;
+    margin-top: 10px;
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+/* OOKls-Calendar-PP */
+
+.OOcalendar-container.OOKls-Calendar-PP{
+    right: 130px !important;
+}
+
+.OOcalendar-container.OUkiaks-PPOlad{
+    position: absolute !important;
+    right: 280px !important;
+}
+
+
+
+
+/* HYhaks-PPPOplssaw */
+
+.HYhaks-PPPOplssaw{
+    position: relative;
+    min-height: 250px;
+    height: auto;
+}

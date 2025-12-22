@@ -1,0 +1,823 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins/Poppins-Thin.ttf") format("truetype");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins/Poppins-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins/Poppins-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins/Poppins-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins/Poppins-Black.ttf") format("truetype");
+  font-weight: 900;
+}
+
+* {
+  box-sizing: border-box;
+}
+*,
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  width: 100%;
+  background-color: #fff;
+  color: #372580;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+li {
+  list-style: none;
+}
+a:hover,
+a:focus,
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a,
+button {
+  outline: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+a,
+button,
+input,
+span,
+textarea,
+select {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+}
+select option {
+  font-size: 13px;
+}
+.large-container {
+  width: 90%;
+  margin-left: 5%;
+}
+
+/* For Chrome, Safari, Edge autofill background removal */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  -webkit-text-fill-color: #372580 !important;
+}
+
+/* Optional: focus & hover states */
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  -webkit-text-fill-color: #372580 !important;
+}
+
+.site-container {
+  position: relative;
+  width: 80%;
+  margin-left: 10%;
+  height: auto;
+}
+
+@media screen and (max-width: 1300px) {
+  .large-container,
+  .site-container {
+    width: 95% !important;
+    margin-left: 2.5% !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .big-text {
+    font-size: 40px !important;
+    line-height: 130% !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .big-text {
+    font-size: 30px !important;
+  }
+  .mid-text {
+    font-size: 20px !important;
+  }
+}
+@media screen and (max-width: 450px) {
+  .p {
+    font-size: 14px !important;
+  }
+}
+.big-text {
+  font-size: 60px;
+  line-height: 70px;
+  font-weight: 600;
+  /* color: #000032; */
+}
+
+.mid-text {
+  font-size: 35px;
+  line-height: 45px;
+  font-weight: 500;
+}
+
+.dd-none {
+  display: none !important;
+}
+
+.btn-primary-bg {
+  background-color: #7226ff !important;
+  border-color: #7226ff !important;
+  color: #fff !important;
+  transition: all 0.3s ease-in-out;
+}
+.btn-primary-bg:hover {
+  background-color: #450cd5 !important;
+  border-color: #450cd5 !important;
+  color: #fff !important;
+}
+.btn-primary-bg:disabled {
+  background-color: #c4a8ff;
+  cursor: not-allowed;
+}
+
+.custom-scroll-bar {
+  overflow-y: overlay;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 1200px) {
+  .custom-scroll-bar {
+    overflow-y: overlay;
+    overflow-x: hidden;
+    scrollbar-color: #787777 #fff !important;
+    scrollbar-width: thin; /* for Firefox */
+  }
+
+  .custom-scroll-bar::-webkit-scrollbar {
+    width: 3px; /* thinner vertical scrollbar */
+    height: 8px; /* horizontal scrollbar height */
+  }
+
+  /* Thumb styling */
+  .custom-scroll-bar::-webkit-scrollbar-thumb {
+    background-color: #787777;
+    border-radius: 10px;
+  }
+}
+
+.Gen-Boxshadow {
+  background-color: #fff;
+  border: 1px solid #e7e7e9 !important;
+}
+.Simp-Boxshadow {
+  background-color: #fff;
+}
+
+.Cool-Boxshadow {
+  box-shadow: 0 4px 8px rgba(94, 86, 139, 0.05);
+  -webkit-box-shadow: 0 4px 8px rgba(94, 86, 139, 0.05);
+  -moz-box-shadow: 0 4px 8px rgba(94, 86, 139, 0.05);
+  background-color: #fff;
+}
+
+p.error,
+.erro-message-Txt {
+  color: #f43232;
+  font-size: 10px;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+p.error {
+  margin-top: 0px !important;
+}
+.oooi-Cuup-LinkD p {
+  max-width: 200px; /* Adjust as needed */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.search-container svg.search-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Alll_OOo_LODer */
+
+.Alll_OOo_LODer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 99999;
+}
+
+.loader {
+  width: 50px;
+  height: 28px;
+  --_g: no-repeat radial-gradient(farthest-side, #7226ff 94%, #0000);
+  background: var(--_g) 50% 0, var(--_g) 100% 0;
+  background-size: 12px 12px;
+  position: relative;
+  animation: l23-0 1.5s linear infinite;
+}
+.loader:before {
+  content: "";
+  position: absolute;
+  height: 12px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #f042ff;
+  left: 0;
+  top: 0;
+  animation: l23-1 1.5s linear infinite,
+    l23-2 0.5s cubic-bezier(0, 200, 0.8, 200) infinite;
+}
+@keyframes l23-0 {
+  0%,
+  31% {
+    background-position: 50% 0, 100% 0;
+  }
+  33% {
+    background-position: 50% 100%, 100% 0;
+  }
+  43%,
+  64% {
+    background-position: 50% 0, 100% 0;
+  }
+  66% {
+    background-position: 50% 0, 100% 100%;
+  }
+  79% {
+    background-position: 50% 0, 100% 0;
+  }
+  100% {
+    transform: translateX(calc(-100% / 3));
+  }
+}
+@keyframes l23-1 {
+  100% {
+    left: calc(100% + 7px);
+  }
+}
+@keyframes l23-2 {
+  100% {
+    top: -0.1px;
+  }
+}
+
+.Alll_OOo_LODer p {
+  font-size: 10px;
+  font-style: italic;
+  margin-top: 3px;
+  display: none !important;
+}
+
+.Main_Dashboard_Page {
+  /* z-index: 100; */
+  position: relative;
+}
+
+/* present */
+
+.present {
+  border-left: none !important;
+}
+
+.status-badge {
+  border-radius: 8px !important;
+  font-size: 9px !important;
+}
+.submenu-super li a {
+  opacity: 0.7 !important;
+}
+.submenu-super li.active a,
+.submenu-super li a:hover {
+  background-color: #ece8fd !important;
+  opacity: 1 !important;
+}
+
+.dash-footer {
+  z-index: 100 !important;
+  position: relative;
+}
+
+.ggg-Main-DB-Envt {
+  position: relative;
+  padding-left: 250px;
+  margin-top: 30px;
+}
+
+.ThemeSwitch .Alll_OOo_LODer,
+.ThemeSwitch .Top-NaV,
+.ThemeSwitch {
+  background-color: #141127 !important;
+  color: #fff !important;
+}
+.ThemeSwitch {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+}
+
+.ThemeSwitch .RegAveTrav-Card,
+.ThemeSwitch .Gen-Boxshadow {
+  background-color: transparent !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.ThemeSwitch .HYsi svg {
+  fill: #fff !important;
+}
+
+.ThemeSwitch .Main-DB-Envt::before {
+  background-color: #1c1735 !important;
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 0.25rem 0.5rem 0 rgba(20, 17, 39, 0.5) !important;
+  -webkit-box-shadow: 0 0 #0000, 0 0 #0000,
+    0 0.25rem 0.5rem 0 rgba(20, 17, 39, 0.5) !important;
+  -moz-box-shadow: 0 0 #0000, 0 0 #0000,
+    0 0.25rem 0.5rem 0 rgba(20, 17, 39, 0.5) !important;
+}
+
+.ThemeSwitch .NaV-2-Prof-1 img,
+.ThemeSwitch .NaV-2-Prof-1 span {
+  background: linear-gradient(
+    135deg,
+    #450cd5 0%,
+    #7226ff 50%,
+    #f042ff 100%
+  ) !important;
+}
+
+.ThemeSwitch .LeftnavBr-Icons li p,
+.ThemeSwitch .LeftnavBr-Icons li a {
+  border-color: #141127 !important;
+}
+
+.ThemeSwitch .SSl-CUrent-APP {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.ThemeSwitch .SSl-CUrent-APP:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.ThemeSwitch .NaV-2-Icons a:hover,
+.ThemeSwitch .NaV-2-Icons span:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.ThemeSwitch .LeftnavBr-Icons li p:hover,
+.ThemeSwitch .LeftnavBr-Icons li a:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.ThemeSwitch .LeftnavBr-Icons li.active p,
+.ThemeSwitch .LeftnavBr-Icons li.active a {
+  background-color: #7226ff !important;
+  color: #fff !important;
+}
+
+.ThemeSwitch .LeftnavBr-Icons li .submenu-super li a,
+.ThemeSwitch .LeftnavBr-Icons li .submenu-super li.active a {
+  background-color: transparent !important;
+  color: #fff !important;
+}
+
+.ThemeSwitch .LeftnavBr-Icons li .submenu-super li a:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.ThemeSwitch .noti-LI-TABr:hover,
+.ThemeSwitch .LeftnavBr-Icons li .submenu-super li.active a {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.ThemeSwitch .Notis-Read-Top,
+.ThemeSwitch .noti-LI-TABr,
+.ThemeSwitch .Nottic-Panel-Top,
+.ThemeSwitch .appls-D,
+.ThemeSwitch .appls-D a {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+.ThemeSwitch .Nottic-Panel,
+.ThemeSwitch .pdf-modal-content,
+.ThemeSwitch .VewRequisition-Main,
+.ThemeSwitch .CreateRequisition-box,
+.ThemeSwitch .OOcalendar-dropdown,
+.ThemeSwitch .TaSt-Modal-COntsn,
+.ThemeSwitch .more-apps-dropdown,
+.ThemeSwitch .All_Drop_Down,
+.ThemeSwitch .genn-Drop-Sec {
+  background-color: #252141 !important;
+  border-color: #332f4e !important;
+  color: #fff !important;
+}
+
+.ThemeSwitch .All-TTo-Nagbs-1 img,
+.ThemeSwitch .All-TTo-Nagbs-1 span,
+.ThemeSwitch .feat-Main a {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+  color: #fff !important;
+}
+
+.ThemeSwitch .feat-Main {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.ThemeSwitch .GHuh-Form-Input select,
+.ThemeSwitch .GHuh-Form-Input input,
+.ThemeSwitch .GHuh-Form-Input textarea,
+.ThemeSwitch .Dash-OO-Boas-Top-2 .genn-Drop-Search input,
+.ThemeSwitch .genn-Drop-Search input {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.ThemeSwitch .GHuh-Form-Input select:focus,
+.ThemeSwitch .GHuh-Form-Input input:focus,
+.ThemeSwitch .GHuh-Form-Input textarea:focus,
+.ThemeSwitch .Dash-OO-Boas-Top-2 .genn-Drop-Search input:focus,
+.ThemeSwitch .genn-Drop-Search input {
+  background-color: transparent !important;
+}
+
+.ThemeSwitch .genn-Drop-Search input::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.ThemeSwitch .oujah-osi p,
+.ThemeSwitch .All-TTo-Nagbs-2 p {
+  color: #fff !important;
+}
+
+.ThemeSwitch .oujah-osi span,
+.ThemeSwitch .All-TTo-Nagbs-2 span {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.ThemeSwitch .All_Drop_Down button,
+.ThemeSwitch .All_Drop_Down a {
+  color: #fff !important;
+}
+
+.ThemeSwitch .All_Drop_Down button:hover,
+.ThemeSwitch .All_Drop_Down a:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: #fff !important;
+}
+
+.ThemeSwitch .glo-Top-Card {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.ThemeSwitch .ooilaui-Card,
+.ThemeSwitch .RRR-SS-HHomss-Card {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.ThemeSwitch .RRR-SS-HHomss-Card:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.ThemeSwitch .glo-Top-Card h3 {
+  color: #fff !important;
+}
+
+.ThemeSwitch .RRR-SS-HHomss-Card span {
+  color: #988acc !important;
+}
+
+.ThemeSwitch .OVG-Header {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.ThemeSwitch .Avil-Status {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.ThemeSwitch .TeamMembers-Card-Part11 span,
+.ThemeSwitch .TeamMembers-Card-Part11 img {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.ThemeSwitch .olkl-GG-ol button {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  color: #fff !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.ThemeSwitch .olkl-GG-ol button.active {
+  background-color: #7226ff !important;
+  color: #fff !important;
+}
+
+.ThemeSwitch .OVG-Header-R button,
+.ThemeSwitch .OVG-Header-R a {
+  color: #fff !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.ThemeSwitch .Gen-OOplBg-Part:hover,
+.ThemeSwitch .OVG-Header-R button:hover,
+.ThemeSwitch .OVG-Header-R a:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.ThemeSwitch .Gen-OOplBg-Part {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.ThemeSwitch .Gen-OOplBg-Part-1 span {
+  color: #7226ff !important;
+}
+
+.ThemeSwitch .prog-tracKK p span {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.ThemeSwitch .TaskBar-Main,
+.ThemeSwitch .PPl-Tops {
+  background-color: #2f2a46 !important;
+}
+
+.ThemeSwitch .Glkk-Card {
+  border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.ThemeSwitch .GHGb-MMIn-DDahs-Top ul select,
+.ThemeSwitch .GHGb-MMIn-DDahs-Top ul li {
+  background-color: transparent !important;
+  color: #fff !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.ThemeSwitch .ssol-Subam,
+.ThemeSwitch .oluj-Seccco,
+.ThemeSwitch .VewRequisition-Part-Top,
+.ThemeSwitch .GHuh-Form-Sec-Top,
+.ThemeSwitch .ssen-regs,
+.ThemeSwitch .CreateRequisition-box-Foot,
+.ThemeSwitch .CreateRequisition-box-Top,
+.ThemeSwitch .YUa-Opal-Part-2,
+.ThemeSwitch .glo-Top-Card h5 span,
+.ThemeSwitch .OL_TTOP_YS,
+.ThemeSwitch .table-container th,
+.ThemeSwitch .table-container td,
+.ThemeSwitch .Div-DR::before,
+.ThemeSwitch .Ul-OKik li,
+.ThemeSwitch .PPolsuka h6 span,
+.ThemeSwitch .TAx-AMijs-2,
+.ThemeSwitch .PPl-Tops,
+.ThemeSwitch .Taxy-Days,
+.ThemeSwitch .DD-Day,
+.ThemeSwitch .GBJ-Parts,
+.ThemeSwitch .Div-DR {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.ThemeSwitch .prog-tracKK-Bar {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.ThemeSwitch .summary-item,
+.ThemeSwitch .Dash-OO-Boas-Top-1 span {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+  color: #fff !important;
+}
+
+.ThemeSwitch .Gen-Sys-table th {
+  background-color: transparent !important;
+}
+
+.ThemeSwitch .Gen-Sys-table thead {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.ThemeSwitch .Attendd-Sec {
+  background-color: transparent !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.ThemeSwitch .table-container {
+  background-color: transparent !important;
+}
+
+.ThemeSwitch .table-container td {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.ThemeSwitch .table-container th {
+  color: #fff !important;
+}
+
+.ThemeSwitch .pagination-extra input {
+  background-color: transparent !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #fff !important;
+}
+
+.ThemeSwitch .pagination button:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+.ThemeSwitch .upload-label,
+.ThemeSwitch .pagination button {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #fff !important;
+  text-transform: none !important;
+}
+
+.ThemeSwitch .pagination button.active {
+  background-color: #7226ff !important;
+  color: #fff !important;
+}
+.ThemeSwitch .file-types,
+.ThemeSwitch .pagination-extra span {
+  color: #fff !important;
+}
+
+.ThemeSwitch .file-types {
+  opacity: 0.7 !important;
+}
+
+.ThemeSwitch .GHuh-Form-Sec-Top,
+.ThemeSwitch .ssen-regs,
+.ThemeSwitch .CreateRequisition-box-SubTop {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  color: #fff !important;
+}
+
+.ThemeSwitch .CreateRequisition-box-Top button:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* .ThemeSwitch .Gen-OOplBg-Part-2 p{
+  color: #fff !important;
+} */
+
+.ThemeSwitch ul.tab-Loadding-AniMMA li {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  opacity: 0.1 !important;
+}
+
+.ThemeSwitch .PPOlaj-SSde-TopSSUB,
+.ThemeSwitch select option {
+  color: #332f4e !important;
+}
+
+.ThemeSwitch .form-section {
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.ThemeSwitch .HHj-Card {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.ThemeSwitch .dddd-TTyhs,
+.ThemeSwitch .olsolsk-YYu h4 {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #fff !important;
+}
+
+.ThemeSwitch .card-active {
+  background-color: transparent !important;
+  border: 1px solid #fff !important;
+}
+.ThemeSwitch .ooilssa .table-container tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.ThemeSwitch .ooilssa .table-container tbody tr:hover td {
+  color: #fff !important;
+}
+
+.ThemeSwitch .close-icon:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+  opacity: 1;
+}
+
+.ThemeSwitch .tenaj-Prolt-Main {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.ThemeSwitch .tenaj-Prolt-Main-2-Main p {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.ThemeSwitch .tenaj-Prolt-Main:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+@media screen and (min-width: 1200px) {
+  .ThemeSwitch .custom-scroll-bar {
+    scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.02) !important;
+  }
+
+  /* Thumb styling */
+  .ThemeSwitch .custom-scroll-bar::-webkit-scrollbar-thumb {
+    background-color: #787777 !important;
+  }
+}
+
+/* For Chrome, Safari, Edge autofill background removal */
+.ThemeSwitch input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.08) inset !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+/* Optional: focus & hover states */
+.ThemeSwitch input:-webkit-autofill:focus,
+.ThemeSwitch input:-webkit-autofill:hover {
+  -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.08) inset !important;
+  -webkit-text-fill-color: #fff !important;
+}

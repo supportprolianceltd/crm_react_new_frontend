@@ -1,0 +1,222 @@
+.rewards-penalties-page {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 1rem;
+}
+
+.rewards-penalties-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rewards-penalties-title {
+  color: #372580;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.rewards-penalties-description {
+  border-bottom: 1px solid #ebecf0;
+  color: #5b616d;
+  font-size: 13px;
+  padding-bottom: 0.4rem;
+  margin-top: 0.25rem;
+  width: 80%;
+}
+
+.rewards-penalties-statistics-cards-container {
+  display: flex !important;
+  gap: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.confirmation-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 15px;
+}
+
+.confirmation-body h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #372580;
+}
+
+.confirmation-body p {
+  margin: 0;
+  color: #5b616d;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.confirmation-icon {
+  border-radius: 16px;
+  background: linear-gradient(180deg, #e9ddff 0%, #dac7ff 100%);
+  box-shadow: 0 1px 1px -0.5px rgba(0, 0, 0, 0.04),
+    0 3px 3px -1.5px rgba(0, 0, 0, 0.04);
+  gap: 12px;
+  padding: 12px;
+}
+
+.confirmation-icon img {
+  display: flex;
+  width: 33.333px !important;
+  height: 26.667px !important;
+  flex-shrink: 0;
+  padding: 6.667px 3.333px 6.666px 3.333px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .rewards-penalties-statistics-cards-container {
+    flex-direction: column !important;
+  }
+}
+
+.rewards-penalties-statistics-card {
+  flex: 1 !important;
+  background-color: #fff !important;
+  border-radius: 10px !important;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+  padding: 1rem !important;
+}
+
+.rewards-penalties-statistics-title {
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: #372580 !important;
+  margin-bottom: 0.3rem !important;
+}
+
+.rewards-penalties-statistics-count {
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  color: #1a1a66 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.rewards-penalties-statistics-percentage {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.3rem !important;
+  font-size: 0.8rem !important;
+  color: green !important;
+}
+
+.rewards-penalties-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.rewards-penalties-table {
+  background-color: #fff;
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 16px;
+  margin-top: 0.5rem;
+  padding-inline: 1rem;
+}
+
+/* Add Reward/Penalty Button */
+.add-reward-penalty-button {
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: #7226ff;
+  box-shadow: 0 2px 8px -2px rgba(255, 255, 255, 0.56) inset,
+    0 0 8px -2px rgba(0, 0, 0, 0.24) inset;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.add-reward-penalty-button svg {
+  width: 15px;
+  height: 15px;
+}
+
+.rewards-penalties-page {
+  padding: 24px;
+}
+
+/* Tabs */
+.tabs-container {
+  display: flex;
+  gap: 12px;
+  background-color: #f3f4f6;
+  border-radius: 9999px;
+  padding: 6px;
+  margin-bottom: 24px;
+  width: fit-content;
+}
+
+.tab-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 9999px;
+  background: transparent;
+  cursor: pointer;
+  color: #6b7280;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.tab-button.active {
+  background: #ffffff;
+  color: #6d28d9;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.details-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.detail-row label {
+  font-weight: 600;
+  color: #374151;
+  min-width: 150px;
+  text-transform: none !important;
+}
+
+.detail-row span {
+  flex: 1;
+  text-align: right;
+  color: #6b7280;
+  word-break: break-word;
+}
+
+/* Ensure Modal handles full width for details */
+.modal-content.details-modal {
+  max-width: 500px;
+}

@@ -1,0 +1,631 @@
+/* MyTasksContent-Top */
+
+.MyTasksContent-Top {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 20px 30px;
+  border-bottom: 1px solid #ededef;
+}
+
+.MyTasksContent-Top ul {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  overflow-x: auto;
+  font-size: 12px;
+}
+
+.MyTasksContent-Top ul li {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.MyTasksContent-Top ul li span {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.MyTasksContent-Top ul li span svg {
+  width: 14px;
+  color: #8c929c;
+}
+
+.MyTasksContent-Top ul li b {
+  font-weight: 500;
+  padding: 1px 5px;
+  border-radius: 30px;
+  border: 1px solid transparent;
+}
+
+.MyTasksContent-Top ul li b.durrad-Bbab {
+  background-color: #e6e0fe;
+  margin-left: 5px;
+  padding: 1px 10px;
+}
+
+/* MyTasksContent-Mmain-BDy */
+
+.MyTasksContent-Mmain-BDy {
+  position: relative;
+  width: 100%;
+  padding: 0px 30px;
+}
+
+.Mmain-BDy-Top {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 15px 0px;
+  border-bottom: 1px solid #ededef;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.Oo-ProFt {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+}
+
+.Oo-ProFt-1 {
+  position: relative;
+}
+
+.Oo-ProFt-1 img,
+.Oo-ProFt-1 span {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  background-color: #f0e9ff;
+  font-weight: 600;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.Oo-ProFt-2 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+.Oo-ProFt-2 p {
+  font-size: 14px;
+  font-weight: 600;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Mmain-BDy-Top-Btns {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.Mmain-BDy-Top-Btns button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 6px 10px;
+  background-color: #f7f5ff;
+  border: 1px solid #e6e0fe;
+  border-radius: 8px;
+  font-size: 11px;
+  gap: 8px;
+}
+.Mmain-BDy-Top-Btns button span {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.Gne-Btns,
+.Mmain-BDy-Top-Btns button svg {
+  position: relative;
+  width: 13px;
+}
+
+.Mmain-BDy-Top-Btns b {
+  padding: 5px 8px;
+  background-color: #e6e0fe;
+  border-radius: 30px;
+  line-height: 100%;
+  font-weight: 500;
+}
+
+.Mmain-BDy-Top-Btns .ClockUOut,
+.Mmain-BDy-Top-Btns .ClockUIn {
+  user-select: none !important;
+  cursor: pointer !important;
+}
+
+.OOStaTus.completed {
+  color: #8b4cff;
+}
+
+/* GGths-BBsyn */
+
+.GGths-BBsyn {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 30px;
+}
+
+.GGths-BBsyn-1 {
+  position: relative;
+  width: 200px;
+  height: auto;
+  min-height: 200px;
+}
+
+.Hhsa-Btns {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.Hhsa-Btns button {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 20px;
+  font-size: 12px;
+  background-color: #f7f5ff;
+  border-radius: 30px;
+  font-weight: 500;
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.Hhsa-Btns button svg {
+  width: 14px;
+}
+
+.Hhsa-Btns button.active {
+  color: #7226ff;
+  font-weight: 600;
+  background-color: #e6e0fe;
+}
+
+.NumB-Task {
+  position: absolute;
+  right: 10px;
+  font-weight: 500;
+  line-height: 100%;
+  padding: 4px 8px;
+  background-color: #7226ff;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 8px;
+}
+
+/* GGths-BBsyn-2 */
+
+.GGths-BBsyn-2 {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.Moduls-SeCC {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+}
+
+.Moduls-LefNV {
+  position: relative;
+  width: 220px;
+  height: auto;
+  max-height: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.Moduls-LefNV label {
+  position: relative;
+  width: 100%;
+  height: auto;
+  text-transform: none !important;
+}
+
+.Moduls-LefNV span {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  padding: 8px;
+  color: #667085;
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.Moduls-LefNV span input[type="checkbox"] {
+  accent-color: #7226ff;
+  margin-top: 3px;
+}
+
+.Moduls-LefNV span:hover {
+  color: #7226ff;
+}
+
+.Moduls-LefNV span.active {
+  color: #7226ff;
+  font-weight: 600;
+}
+
+/* Moduls-Mains */
+
+.Moduls-Mains {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.Moduls-Top {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ededef;
+}
+.Profll-Da {
+  padding-bottom: 10px;
+}
+.Moduls-Top h3 {
+  font-size: 18px;
+  font-weight: 500;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.Moduls-Top h3 span {
+  font-size: 12px;
+}
+
+.Moduls-Top-Btns {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.Moduls-Top-Btns button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0px;
+  background-color: transparent;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.Moduls-Top-Btns button svg {
+  width: 14px;
+}
+
+.Moduls-Top-Btns button span {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.Moduls-Top-Btns button b {
+  position: relative;
+  font-weight: 500;
+  line-height: 100%;
+  padding: 4px 8px;
+  background-color: #e6e0fe;
+  border-radius: 30px;
+  font-size: 8px;
+  font-weight: 600;
+}
+
+.Moduls-Top-Btns button:hover {
+  color: #7226ff;
+}
+
+.Moduls-Top-Btns button.active {
+  border-color: #7226ff;
+  color: #7226ff;
+  font-weight: 600;
+}
+
+/* Ggen-BDa */
+
+.Ggen-BDa {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  max-height: 300px;
+  padding: 0px 10px;
+}
+
+.LLsi-Header {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 10px 0px;
+  border-bottom: 1px solid #ededef;
+  display: grid;
+  grid-template-columns: 15px 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.LLsi-Header span {
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.LLsi-Ul {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 10px;
+}
+.LLsi-Ul li {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 10px 10px;
+  border: 1px solid #ededef;
+  display: grid;
+  grid-template-columns: 15px 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  background-color: #f7f5ff;
+  border-radius: 8px;
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.LLsi-Ul li:hover {
+  background-color: #e6e0fe;
+}
+.LLsi-Ul li span {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.LLsi-Ul li span b {
+  font-size: 8px;
+  font-weight: 500;
+  background-color: #e6e0fe;
+  border: 1px solid #f7f5ff;
+  padding: 3px 8px;
+  border-radius: 30px;
+  margin-top: 2px;
+}
+
+.LLsi-Ul li span span {
+  display: inline-flex;
+  padding: 3px 8px;
+  border: 1px solid #e6e0fe;
+  border-radius: 7px;
+  background-color: #fff;
+  font-size: 11px;
+}
+
+.LLsi-Ul li span input[type="checkbox"] {
+  accent-color: #7226ff;
+  margin-top: 2px;
+}
+
+.HyaTask-Details {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.OO-BackBtn {
+  position: relative;
+  display: inline-flex;
+  padding: 3px 8px;
+  border-radius: 7px;
+  background-color: #fff;
+  font-size: 11px;
+  align-items: center;
+  gap: 5px;
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.OO-BackBtn svg {
+  width: 12px;
+}
+.OO-BackBtn:hover {
+  background-color: #f7f5ff;
+}
+
+.Gthstg-Top {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.Gthstg-Top h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.Gthstg-Top label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  padding: 3px 8px;
+  user-select: none;
+  cursor: pointer;
+  border: 1px solid #e6e0fe;
+  border-radius: 7px;
+  text-transform: none !important;
+}
+.Gthstg-Top label input[type="checkbox"] {
+  accent-color: #7226ff;
+  text-transform: none !important;
+}
+
+.Gthstg-Bddy {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid #ededef;
+  border-radius: 10px;
+}
+
+.Gthstg-Bddy p {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  padding: 10px 15px;
+  border-bottom: 1px solid #ededef;
+  font-size: 12px;
+}
+.Gthstg-Bddy p:last-child {
+  border-bottom: none;
+}
+
+.Gthstg-Bddy p b {
+  font-weight: 600;
+}
+
+.OOks-Note {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.OOks-Note .Gthstg-Bddy {
+  margin-top: 10px !important;
+}
+
+.OOks-Note h4 {
+  font-size: 15px;
+  font-weight: 600;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.OOks-Note h4 span {
+  position: relative;
+  display: inline-flex;
+  padding: 3px 8px;
+  border-radius: 7px;
+  background-color: #e6e0fe;
+  font-size: 11px;
+  align-items: center;
+  gap: 5px;
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-weight: 500;
+}
+.OOks-Note h4 span svg {
+  width: 12px;
+}
+.OOks-Note h4 span:hover {
+  color: #7226ff;
+}
+
+.Aagr-VsT-Time {
+  position: relative;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* Ujs-Hyha */
+
+.Ujs-Hyha {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.Ujs-Hyha h3 {
+  font-size: 16px;
+  font-weight: 600;
+}

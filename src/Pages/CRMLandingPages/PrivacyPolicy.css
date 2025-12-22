@@ -1,0 +1,91 @@
+.privacy-policy-container {
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 3rem;
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* .privacy-policy-header{
+
+} */
+
+.privacy-policy-content {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 0 auto;
+  padding: 40px 100px;
+  width: 100%;
+}
+
+.privacy-content {
+  width: 60%;
+}
+.privacy-content-table {
+  position: sticky;
+  top: 90px;
+  width: 35%;
+  padding: 30px 20px;
+  box-shadow: 0 10px 15px -3px rgba(152, 152, 152, 0.4);
+  border-radius: 12px;
+  font-size: 13px;
+}
+
+.privacy-content-table li {
+  list-style-position: inside;
+  list-style-type: circle;
+  text-decoration: underline;
+}
+
+.privacy-content-table p {
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.privacy-content-sec {
+  margin-bottom: 30px;
+}
+
+.privacy-content h3 {
+  margin: 8px 0;
+  font-size: 24px;
+}
+
+.privacy-content li {
+  list-style-position: inside;
+  list-style-type: circle;
+  text-indent: 5px;
+}
+
+.privacy-content p {
+  line-height: 1.5rem;
+}
+
+#one,
+#two,
+#three,
+#four,
+#five,
+#six,
+#seven,
+#eight,
+#nine,
+#ten,
+#eleven,
+#twelve,
+#thirteen,
+#fourteen,
+#fifteen,
+#sixteen,
+#seventeen,
+#eighteen,
+#nineteen,
+#twenty,
+#twenty-one {
+  scroll-margin-top: 100px;
+}

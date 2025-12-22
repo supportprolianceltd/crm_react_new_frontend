@@ -1,0 +1,213 @@
+.Meddi-Ppage .KKm-Hheaders{
+    padding-top: 0px !important;
+}
+
+.KKm-Hheaders h3{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.Meddi-Ppage .table-container tbody tr{
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.Meddi-Ppage .table-container tbody tr:hover{
+    background-color: #f7f5ff;
+}
+
+
+.monn-Ntga{
+    background-color: transparent !important;
+    cursor: default !important;
+}
+.ddsaqq .TTtata-Input,
+.OOksl-Pls .TTtata-Input{
+    margin: 10px 0px;
+}
+
+.ddsaqq h5,
+.OOksl-Pls h5{
+    font-size: 12px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.OOksl-Pls h5 svg{
+    width: 13px;
+}
+.OOksl-Pls h5 a{
+    color: #7226FF;
+    text-decoration: underline;
+}
+
+.OOksl-Pls .Info-TTb-BS-HYH p{
+    margin-top: 0px !important;
+    margin-bottom: 10px !important;
+}
+
+
+
+.Meddi-Ppage .genn-Drop-Search input{
+    font-size: 13px !important;
+}
+
+.OOkl-ULLI{
+    background-color: #f7f5ff;
+    border:1px solid #ece8fc;
+    margin-top: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    max-height: 200px;
+}
+
+
+.OOkl-ULLI li{
+    font-size: 12px !important;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.OOkl-ULLI li:hover{
+    background-color:#ece8fd !important; 
+}
+
+.OOkl-ULLI li:last-child{
+    border-bottom: none !important;
+}
+
+.slelct-PPsgbaMed{
+    position: relative;
+    background-color: #ece8fd;
+    color: #7226FF;
+    padding: 10px 15px;
+    border-radius: 3px;
+    font-size: 13px !important;
+}
+.slelct-PPsgbaMed span{
+    text-transform: uppercase;
+}
+.slelct-PPsgbaMed strong{
+    font-weight: 600;
+}
+
+
+.ggllak-Ppaths{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.oola-Hrra{
+    margin-bottom: 8px;
+}
+
+
+/* kOll-MinWidth */
+
+.kOll-MinWidth{
+    width: 100%;
+    max-width: 700px;
+}
+
+
+
+/* labell-NGba */
+
+.labell-NGba{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.labell-NGba p,
+.labell-NGba h4{
+    margin-top: 0px !important;
+}
+
+.labell-NGba input[type='radio']{
+    accent-color: #7226FF;
+    margin-top: 5px;
+}
+
+
+/* ooko-drooap */
+
+.ooko-drooap{
+    width: 110px !important;
+    right: 0px !important;
+}
+.ooko-drooap li{
+    white-space: nowrap !important;
+}
+
+/* kika-pplsBTN */
+
+.kika-pplsBTN{
+    padding: 5px 20px !important;
+}
+
+
+/* NNwe-Madd-TTops */
+
+.NNwe-Madd-TTops{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.NNwe-Madd-TTops .Ul-OKik li h3{
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.NNwe-Madd-TTops .Ul-OKik li.KMN-YHA{
+    border-radius: 50%;
+    width: 33px;
+    height: 33px;
+    background-color: #f7f5ff;
+    border-color: #f7f5ff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.NNwe-Madd-TTops .Ul-OKik li.KMN-YHA svg{
+    width:100% !important;
+}
+
+.NNwe-Madd-TTops .Ul-OKik li.KMN-YHA:hover{
+        background-color: #ece8fd !important;
+    color: #7226FF;
+}
+
+
+
+
+.RRagbs-Plsa{
+    background-color: #ece8fd !important;
+    color: #7226FF !important;
+    margin-top: 10px;
+    display: inline-flex !important;
+    padding: 5px 10px;
+    text-transform: uppercase !important;
+    font-size: 11px !important;
+    border-radius: 5px !important;
+    border: 1px solid #7226FF !important;
+}

@@ -1,0 +1,83 @@
+/* StatusBadge.css */
+.status-badge {
+  display: inline-block !important;
+  padding: 0 8px !important;
+  border-radius: 10px !important;
+  font-size: 10px !important;
+  font-weight: 500 !important;
+  color: white !important;
+  line-height: 24px !important;
+  text-align: center !important;
+  min-width: 70px !important;
+}
+
+/* Success-like statuses */
+.status-badge.admin,
+.status-badge.active,
+.status-badge.open,
+.status-badge.accepted,
+.status-badge.approved,
+.status-badge.present,
+.status-badge.hired,
+.status-badge.uploaded,
+.status-badge.submitted,
+.status-badge.passed,
+.status-badge.compliance_completed,
+.status-badge.completed,
+.status-badge.acknowledged {
+  background-color: #d4f7cf !important;
+  color: #35c220 !important;
+}
+
+/* Error-like statuses */
+.status-badge.inactive,
+.status-badge.declined,
+.status-badge.absent,
+.status-badge.rejected,
+.status-badge.withdrawn,
+.status-badge.cancelled {
+  background-color: #fcd9d9 !important;
+  color: #e92020 !important;
+}
+
+/* Warning / pending statuses */
+.status-badge.pending,
+.status-badge.partial,
+.status-badge.shortlisted,
+.status-badge.new,
+.status-badge.in_review,
+.status-badge.interviewing,
+.status-badge.interviewed,
+.status-badge.offer_pending,
+.status-badge.scheduled {
+  background-color: #fff8e6 !important;
+  color: #ca9802 !important;
+}
+
+/* Suspended */
+.status-badge.suspended {
+  background-color: #64748b !important;
+  color: white !important;
+}
+
+/* Priority statuses */
+.status-badge.low {
+  background-color: #d4f7cf !important;
+  color: #35c220 !important;
+}
+
+.status-badge.medium {
+  background-color: #fff8e6 !important;
+  color: #ca9802 !important;
+}
+
+.status-badge.high {
+  background-color: #fcd9d9 !important;
+  color: #e92020 !important;
+}
+
+/* Default / fallback */
+.status-badge.default {
+  background-color: #e2e8f0 !important; /* light gray */
+  color: #475569 !important; /* slate */
+}

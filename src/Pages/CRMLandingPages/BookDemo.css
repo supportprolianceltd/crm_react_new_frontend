@@ -1,0 +1,231 @@
+.book-contact-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8fafc; /* slate-50 */
+  color: #0f172a; /* slate-900 */
+  min-height: 100vh;
+  padding: 150px;
+}
+
+/* Header */
+.book-contact-header {
+  width: 100%;
+  max-width: 1152px; 
+  padding: 0 1rem 3rem;
+  text-align: center;
+}
+
+.book-contact-header h1 {
+  font-size: 48px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  letter-spacing: -0.025em;
+}
+
+.book-contact-items {
+    font-size: 12px;
+}
+
+.book-contact-header p {
+  font-size: 18px;
+  color: #475569; 
+  line-height: 1.625;
+  margin: 0 auto;
+}
+
+/* Content Layout */
+.book-contact-content {
+  width: 100%;
+  max-width: 1152px;
+  padding: 0 1rem 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 130px;
+  align-items: flex-start;
+}
+
+@media (min-width: 1024px) {
+  .book-contact-content {
+    flex-direction: row;
+  }
+}
+
+
+
+/* book-Form Section */
+.book-contact-book-form-card {
+  flex-grow: 1;
+  width: 100%;
+  background: white;
+  border-radius: 1rem;
+  border: 1px solid #e2e8f0;
+  padding: 40px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+@media (min-width: 1024px) {
+  .book-contact-book-form-card {
+    width: 66.666667%;
+  }
+}
+
+.book-contact-book-form-card h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #0f172a;
+}
+
+.book-form-group-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+
+}
+
+@media (min-width: 768px) {
+  .book-form-group-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .book-contact-book-form-card {
+    width: 100%;
+    padding: 20px;
+    min-width: 300px;
+  }
+}
+
+.book-form-group-single {
+  margin-bottom: 1.5rem;
+  
+}
+
+.book-form-input, .book-form-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e2e8f0;
+  outline: none;
+  transition: all 0.2s;
+  color: #334155;
+  background-color: white;
+  font-size: 1rem;
+  box-sizing: border-box;
+  font-family: inherit;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+}
+
+.book-form-input:focus, .book-form-textarea:focus {
+  border-color: #6366f1; /* indigo-500 */
+  box-shadow: 0 0 0 2px #c7d2fe; /* ring-indigo-200 */
+}
+
+.book-form-input::placeholder, .book-form-textarea::placeholder {
+  color: #94a3b8;
+}
+
+.book-form-textarea {
+  resize: none;
+}
+
+.book-demo-endnote{
+    color: #7c7c7c;
+}
+
+.endnote-purp{
+    color: #4338ca;
+    text-decoration: underline;
+}
+
+.book-buttons{
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    width: 200px;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.book-confirm-button {
+  background-color: #4f46e5; 
+  color: white;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.book-confirm-button:hover {
+  background-color: #4338ca; 
+}
+.book-close-button {
+  background-color: #e3e3e3; 
+  color: gray;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 14px;
+}
+
+.book-close-button:hover {
+  background-color: #cecece; 
+  color: #2a2a2a;
+}
+
+@media (max-width: 768px) {
+
+.book-contact-header {
+  min-width: 300px;
+  max-width: 400px;
+  text-align: center;
+  padding: 0 10px;
+
+}
+
+  .book-contact-header h1 {
+    font-size: 24px; 
+  }
+
+  .book-contact-header p {
+  font-size: 16px;
+  color: #475569; 
+  line-height: 1.625;
+  margin: 0 auto;
+}
+
+.book-contact-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8fafc;
+  color: #0f172a; 
+}
+
+.book-contact-content {
+  width: 100%;
+  align-items: center;
+  padding: 20px 20px;
+  gap: 40px
+}
+
+.book-contact-form-card {
+  width: 100%;
+}
+.book-contact-form-card h3 {
+  font-size: 15px;
+}
+
+}

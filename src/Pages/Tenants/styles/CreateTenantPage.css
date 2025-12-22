@@ -1,0 +1,66 @@
+.create-tenant {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-top: 50px;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.checkbox-wrapper label {
+  font-size: 14px;
+  text-transform: none !important;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.form-actions button {
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 24px;
+  padding: 12px;
+  width: 100%;
+}
+
+.cancel-btn {
+  background: #fff;
+  border: 1px solid #ebecf0;
+  color: #5b616d;
+}
+
+.create-btn {
+  background: #8b4cff;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 2px 8px -2px rgba(255, 255, 255, 0.56) inset,
+    0 0 8px -2px rgba(0, 0, 0, 0.24) inset;
+  color: white;
+}
+
+.create-btn:hover {
+  background-color: #6f3bcc;
+  border: 1px solid #8b4cff;
+  transition: all 0.5s;
+}
+
+.create-btn.disabled-btn {
+  background: #c8b6f5;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: none;
+  color: #f0f0f0;
+  cursor: not-allowed;
+  opacity: 0.7;
+}

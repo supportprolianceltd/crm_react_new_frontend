@@ -1,0 +1,198 @@
+.ChattingApp {
+ position: relative;
+}
+
+/* Container for dots */
+.Chatt-IndBTns {
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+  width: 48px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.indicator-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: center;
+  margin-left: -24px; /* center horizontally */
+  /* y is controlled by JS */
+}
+
+/* dot with initials */
+.indicator-dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  user-select: none;
+  pointer-events: auto;
+}
+
+.indicator-dot img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* label hidden by default */
+.sender-label {
+  position: absolute;
+  right: 100%;            
+  top: 50%;
+  margin-right: 10px;
+  transform: translate(8px, -50%);
+  background: rgba(114, 38, 255, 0.9); 
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  white-space: nowrap;
+  font-size: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(114, 38, 255, 0.6);
+  -webkit-box-shadow: 0 2px 8px rgba(114, 38, 255, 0.6);
+  -moz-box-shadow: 0 2px 8px rgba(114, 38, 255, 0.6);
+  z-index: 10;
+}
+
+/* show label on hover of wrapper */
+.indicator-wrapper:hover .sender-label {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+
+
+/* Message count badge */
+.message-count-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: #F042FF;
+  color: white;
+  font-size: 10px;
+  font-weight: 500;
+  padding: 2px 5px;
+  border-radius: 12px;
+  line-height: 1;
+  min-width: 18px;
+  text-align: center;
+  pointer-events: none;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+
+
+.Clossing-OOIla{
+    position: relative;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.Clossing-OOIla svg{
+  width: 25px;
+}
+
+.Clossing-OOIla:hover{
+  transform: rotate(90deg);
+}
+
+
+
+
+
+
+.chat-container {
+  width: 100%;
+  max-width: 600px;
+  height: 90vh;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  background: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-bubble {
+  max-width: 70%;
+  padding: 12px 16px;
+  border-radius: 20px;
+  line-height: 1.4;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chat-bubble.bot {
+  align-self: flex-start;
+  background-color: #e7e7e7;
+  color: #000;
+  border-top-left-radius: 4px;
+}
+
+.chat-bubble.user {
+  align-self: flex-end;
+  background-color: #4f46e5;
+  color: #fff;
+  border-top-right-radius: 4px;
+}
+
+.input-area {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background: #fff;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+}
+
+.input-area button {
+  margin-left: 10px;
+  padding: 0 20px;
+  background-color: #4f46e5;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+   

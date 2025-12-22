@@ -1,0 +1,159 @@
+.Progres-Contne {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.stepper-container {
+  width: 100%;
+  max-width: 700px;
+  padding: 20px;
+  position: relative;
+}
+
+/* Line only between dots */
+.stepper-line {
+  position: absolute;
+  top: 12px; /* aligns with circle center */
+  left: 12px; /* start at center of first dot */
+  right: 12px; /* end at center of last dot */
+  height: 2px;
+  background-color: #ece1fc;
+  z-index: 0;
+}
+
+.stepper-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background-color: #7c3aed; /* purple */
+  z-index: 1;
+}
+
+.stepper-steps {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2; /* keep circles above line */
+}
+
+.step-item {
+  text-align: center;
+  flex: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.step-circle {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #ece1fc;
+  border-radius: 50%;
+  background: #fff;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-circle.active {
+  border-color: transparent;
+}
+
+.step-circle .inner-circle {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #7F56D9;
+  transition: all 0.3s ease-in-out;
+}
+
+.completed-icon{
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.completed-icon svg{
+    width: 11px;
+}
+
+.step-circle.active .inner-circle {
+  opacity: 0;
+}
+.step-circle.active .completed-icon{
+    opacity: 1;
+}
+.step-labels {
+  margin-top: 10px;
+}
+
+.step-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+}
+
+.step-title.active {
+  color: #7c3aed;
+}
+
+.step-subtitle {
+  font-size: 11px;
+  color: #aaa;
+}
+
+.stepper-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.stepper-nav button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #7c3aed;
+  color: white;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.stepper-nav button:disabled {
+  background: #ddd;
+  cursor: not-allowed;
+}
+
+.stepper-nav button:hover:not(:disabled) {
+  background: #5b21b6;
+}
+
+
+
+ /* KKhn-GYH-Part */
+
+ .KKhn-GYH-Part{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+ }
+.form-section h3{
+    font-size: 15px !important;
+    font-weight: 600 !important;
+  }
+
+  .file-types,
+  .file-name{
+    font-size: 12px !important;
+    font-weight: 400 !important;
+  }
+
+
+  .upload-label{
+    gap: 5px !important;
+  }

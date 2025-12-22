@@ -1,0 +1,959 @@
+/* MyTasks_Sec */
+
+.MyTasks_Sec{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+/* MyTasks_Header */
+
+.MyTasks_Header{
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 50px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+
+/* TAx-AMijs */
+
+.TAx-AMijs{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    border-radius: 10px;
+}
+
+.TAx-AMijs-1{
+    position: sticky;
+    width: 260px;
+    height: 86vh;
+    z-index: 400;
+    top:70px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* TAx-AMijs-1-Top */
+
+.TAx-AMijs-1-Top{
+    position: relative;
+    width: 100%;
+}
+
+.TAx-AMijs-1-Top h3{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    padding:10px 20px;
+    border-bottom:  1px solid #EBECF0;
+}
+
+.TAx-AMijs-1-Top h3 svg{
+    width: 13px;
+    margin-top: 3px;
+}
+
+
+/* Glkk-PLS */
+
+.Glkk-PLS{
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+    height: auto;
+    max-height: 100%;
+    padding-bottom: 20px;
+}
+
+
+.Glkk-Card{
+    position: relative;
+    width: 100%;
+    padding:15px 20px;
+    border-bottom:  1px solid #EBECF0;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-left: 3px solid transparent;
+}
+
+.Glkk-Card.started-card,
+.Glkk-Card:hover{
+    background-color: #f7f5ff;
+    border-left-color: #8B4CFF;
+}
+
+.OO-client-info-container{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 7px;
+    margin-bottom: 5px;
+}
+
+.OO-client-info-container img, 
+.OO-client-info-container span {
+    position: relative;
+    width: 26px;
+    height: 26px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    background-color: #F0E9FF;
+    font-weight: 600;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.GGh-PPls{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.GGh-PPls p {
+    font-size: 12px;
+    font-weight: 600;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.oik-pola-ULL{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: auto;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+.oik-pola-ULL li{
+     font-size: 10px;
+    font-weight: 400;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 5px;
+}
+
+.oik-pola-ULL li svg{
+    width: 13px;
+}
+
+
+
+
+.PPolsuka{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+
+
+.PPolsuka h6{
+    position: relative;
+    height: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 9px;
+    font-weight: 400;
+}
+.PPolsuka h6 span{
+    position: relative;
+    padding: 5px 7px;
+    line-height: 100%;
+    border-radius: 5px;
+    border: 1px solid #D0D5DD;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+}
+.PPolsuka h6 span.priority{
+    font-weight: 500;
+}
+.PPolsuka h6 span svg{
+    width: 10px;
+}
+
+.PPolsuka p{
+    position: relative;
+    font-size: 10px;
+    color: #aba5c7;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* TAx-AMijs-2 */
+
+.TAx-AMijs-2{
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-left:  1px solid #EBECF0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.PPl-Tops{
+    position: sticky;
+    top: 55px;
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    border-bottom:  1px solid #EBECF0;
+    z-index: 100;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+
+
+/* Ul-OKik */
+
+.Ul-OKik{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.Ul-OKik li{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    gap: 3px;
+    padding: 0px 8px;
+    height: 25px;
+    font-size: 11px;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid transparent;
+}
+.Ul-OKik li:hover{
+    background-color: #f5f1fe;
+}
+.Ul-OKik li svg{
+    width: 12px;
+}
+
+.Ul-OKik li.WIthBRd-UIK-VBOx{
+    border-color: #D0D5DD;
+}
+
+
+.tot-Tasskai{
+    position: relative;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+/* Task-Calindees */
+
+.Task-Calindees{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    height: 580px;
+}
+
+
+
+
+.Taxy-Days{
+    position: relative;
+    width: 50px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-right:  1px solid #EBECF0;
+}
+
+
+.DD-Day{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom:  1px solid #EBECF0;
+    color: #8C929C;
+    user-select: none;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.DD-Day.active {
+  color: #8B4CFF !important;
+  background-color: #F0E9FF !important;
+}
+.DD-Day:hover{
+    color: #8B4CFF;
+}
+
+.DD-Day.active-today{
+    background-color: #8B4CFF !important;
+    color:  #F0E9FF !important;
+}
+
+.top-Uj{
+    height: 50% !important;
+}
+
+.DD-Day p{
+    font-size: 9px;
+}
+
+.DD-Day h3{
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+
+
+
+/* GBj-Mainso */
+
+.GBj-Mainso{
+    position: relative;
+    width: 100%;
+    overflow-x: auto;      
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.GBj-Mainso.active {
+    cursor: grabbing; /* Show grabbing while dragging */
+}
+.GBJ-Parts{
+    position: relative;
+     width: max-content;
+    height: 100%;
+    border-bottom:  1px solid #EBECF0;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0px;
+}
+
+
+.Div-DR{
+    position: relative;
+    width: 250px;
+    height: 100%;
+    flex-shrink: 0px;
+     flex: 0 0 auto;
+     border-right:  1px solid #EBECF0;
+
+}
+    .Mains-TThabs-Page .Div-DR{
+     z-index: 1;
+    }
+.Div-DR::before{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    border-left: 1px dashed #EBECF0;
+    transform: translateX(-50%);
+    left: 50%;
+    z-index: -10;
+}
+
+
+
+
+
+
+
+
+.GBj-Mainso::-webkit-scrollbar {
+    display: none;
+}
+
+.GBj-Mainso {
+    -ms-overflow-style: none;  /* IE 10+ */
+    scrollbar-width: none;     /* Firefox */
+}
+
+
+.calendar-container {
+  overflow-x: auto;
+  cursor: grab;
+  position: relative;
+}
+
+.calendar-container.active {
+  cursor: grabbing;
+}
+
+.drag-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 50%;
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.drag-arrow.left { left: 10px; }
+.drag-arrow.right { right: 10px; }
+
+.arrow-icon {
+  width: 15px;
+  height: 15px;
+  color: white;
+}
+
+
+
+/* Tol-OPLSA */
+
+.Tol-OPLSA{
+    position: relative;
+    font-size: 10px;
+    color: #8C929C;
+    padding: 10px 20px;
+}
+
+
+
+
+
+
+/* TaskBar */
+
+.TaskBar{
+    position: absolute;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: -10;
+}
+.TaskBar:hover{
+    z-index: 100;
+}
+
+.TaskBar-Main{
+    position: relative;
+    width: 100%;
+    min-width: 200px;
+    height: 60%;
+    background-color: #ece7ff;
+    padding: 0px 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: -10;
+    box-shadow: 0 0 3px rgb(0 0 0 / 10%);
+    -webkit-box-shadow: 0 0 3px rgb(0 0 0 / 10%);
+    -moz-box-shadow: 0 0 3px rgb(0 0 0 / 10%);
+    border: 2px solid #fff;
+}
+
+.ttask-NUma{
+    position: absolute;
+    right: 2px;
+    background-color: #8B4CFF;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 30px;
+    z-index: 5;
+    list-style: 100%;
+    transform: translateY(-50%) !important;
+    top: 50% !important;
+}
+
+.TaskBar-Main p{
+    font-size: 8px !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+}
+.TaskBar-Main p svg{
+    width: 10px;
+}
+.TaskBar:hover .TaskBar-Main{
+    z-index: 100;
+}
+
+.TaskBar-Main h3{
+      font-size: 10px;
+    font-weight: 600;
+    display: -webkit-box;
+  -webkit-line-clamp: 1;  
+  line-clamp: 1;  
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 100%;
+}
+
+
+.task-time{
+    position: relative;
+    border-radius: 30px;
+    white-space: nowrap;
+}
+
+.task-time p{
+    font-size:8px !important;
+    margin-top: 0px !important;
+}
+
+
+
+
+
+.TTo-Lab-SeC{
+    position: absolute;
+    top: -18px;
+    font-size: 9px;
+    display: flex;
+    align-items: center;
+    gap:5px;
+    left: 5px;
+}
+
+.TTo-Lab-SeC .top-labels{
+    white-space: nowrap;
+    padding: 0px 10px;
+    height: 17px;
+    border-radius: 3px;
+    line-height: 100%;
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid transparent;
+}
+
+.top-labels.forced-label{
+    background-color: #FEF2CD !important;
+    color: #CA9802 !important;
+    border-color: #CA9802 !important;
+}
+.top-labels.forced-clock-out-label{
+    background-color: #FEECEC !important;
+    border-color: #FEECEC !important;
+    color: #F03D3D !important;
+    border-color: #F03D3D !important;
+}
+
+.top-labels.extra-time-label{
+    background-color: #feefff !important;
+    color: #F042FF !important;
+    border-color: #F042FF !important;
+}
+
+.top-labels.tottal-work-time{
+    background-color: #D4F7CF !important;
+    color: #35C220 !important;
+    border-color: #35C220 !important;
+}
+
+
+/* OOKtask-timer-container */
+
+.OOKtask-timer-container{
+   display: none;
+}
+
+
+
+
+.task-progress-container,
+.Prodssl-uajs{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    left: 0;
+    border-radius: inherit;
+    overflow: hidden;
+}
+
+.oo-Ptask-progress-container{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: 3px;
+    left: 0;
+    border-radius: inherit;
+}
+
+.task-progress-bar{
+    position: absolute;
+    height: 100%;
+}
+.task-progress-bar {
+  height: 100%;
+  transition: width 1s ease;
+  border-radius: 2px;
+}
+
+.task-time {
+  font-size: 10px;
+  margin-top: 3px;
+}
+
+
+
+
+/* TaSt-Modal-COntsn */
+
+.TaSt-Modal-COntsn{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    /* border-radius: 10px; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* OL_TTOP_YS */
+
+.OL_TTOP_YS{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 20px 30px;
+    border-bottom: 1px solid #EBECF0;
+    display: none;
+}
+
+.TaSt-Modal-COntsn-Main{
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    margin-top: 10px;
+    text-align: center;
+}
+.TaSt-Modal-COntsn-Main p{
+    font-size: 12px;
+}
+.TaSt-Modal-COntsn-Main p b{
+    font-size: 600;
+}
+.modal-overlay{
+    color: inherit !important;
+    width: 100%;
+    height: 100%;
+    padding: 0px !important;
+    z-index: 999999 !important;
+}
+
+.modal-overlay.late-entry .TaSt-Modal-COntsn-Main{
+    background-color: #feefff  !important;
+    color: #F042FF !important;
+    border-color:  #F042FF !important;
+}
+
+.modal-overlay.task-late-entry .TaSt-Modal-COntsn-Main{
+    background-color: #feefff  !important;
+    color: #F042FF !important;
+    border-color:  #F042FF !important;
+}
+
+.modal-overlay.task-early-entry .TaSt-Modal-COntsn-Main{
+    background-color: #FEF2CD  !important;
+    color: #CA9802 !important;
+    border-color:  #CA9802 !important;
+}
+.modal-overlay.task-ontime-entry .TaSt-Modal-COntsn-Main{
+    background-color: #F0E9FF  !important;
+    color: #8B4CFF !important;
+    border-color:  #8B4CFF !important;
+}
+
+
+
+.oaiks-PPolsla{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+    font-size: 11px;
+}
+.oaiks-PPolsla p{
+    position: relative;
+    padding: 2px 8px;
+    border-radius: 30px;
+}
+
+.Toot-POl-FAt{
+    position: relative;
+}
+
+.modal-overlay.task-late-entry .TaSt-Modal-COntsn-Main .Toot-POl-FAt{
+    background-color: #F042FF !important;
+    color: #fff;
+}
+.modal-overlay.task-early-entry .TaSt-Modal-COntsn-Main .Toot-POl-FAt{
+    background-color: #CA9802 !important;
+    color: #fff;
+}
+.modal-overlay.task-ontime-entry .TaSt-Modal-COntsn-Main .Toot-POl-FAt{
+    background-color: #8B4CFF !important;
+    color: #fff;
+}
+
+
+
+/* TAxT-close-modal-button */
+
+.TAxT-close-modal-button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 30px;
+    font-size: 10px;
+    user-select: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7f5ff;
+    z-index: 500;
+}
+
+.TAxT-close-modal-button svg{
+    width: 60%;
+}
+
+.task-hover-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 250px;
+  pointer-events: none;
+}
+
+
+
+
+/* MMO-client-info-container */
+
+.MMO-client-info-container{
+    position: absolute;
+      box-shadow: 0 4px 8px rgba(94, 86, 139, 0.11); 
+    -webkit-box-shadow: 0 4px 8px rgba(94, 86, 139, 0.11); 
+    -moz-box-shadow: 0 4px 8px rgba(94, 86, 139, 0.11); 
+    background-color: #fff;
+    top: 100%;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 500;
+    border-radius: 5px;
+    min-width: 130px;
+    max-width: 150px;
+    transform: translateY(-5px);
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+    opacity: 0;
+    border: 1px solid #ededef;
+}
+
+
+
+.TaskBar:hover .MMO-client-info-container{
+    transform: translateY(0px);
+    pointer-events:auto;
+    opacity: 1;
+}
+
+
+.MMO-client-info-container img, 
+.MMO-client-info-container span {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    background-color: #F0E9FF;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.MMO-client-info-container p{
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+
+
+
+
+/* no-tasks-message */
+
+.no-tasks-message{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    gap: 15px;
+}
+
+.no-tasks-message img{
+    width: 100%;
+    max-width: 150px;
+}
+
+.no-tasks-message p{
+    font-size: 12px;
+    font-style: italic;
+}
+
+
+
+/* Gthst-du */
+
+.Gthst-du{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ededef;
+}
+
+.Gthst-du h2{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+
+.DDayhs-Sec{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+
+.Clk-btn-danger-bg{
+    background:  linear-gradient(135deg, #450CD5 0%, #7226FF 50%, #F042FF 100%);;
+    border-color: transparent !important;
+    color: #fff !important;
+}
+
+
+
+.alert-message{
+    font-size: 12px !important;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    z-index: 999999;
+    border-radius: 4px;
+    text-align: center;
+    background-color: #ff4d4d;
+    color: #fff;
+}

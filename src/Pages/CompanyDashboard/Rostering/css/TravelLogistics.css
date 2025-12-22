@@ -1,0 +1,496 @@
+.main-travel-logistics {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.header-travel-logistics {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 20px 0px;
+  border-bottom: 1px solid #ededef;
+}
+
+.header-travel-logistics h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Status Cards Container */
+.travel-status-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+.travel-status-card {
+  padding: 20px;
+  background: white;
+  border: 1px solid #e5e7eb7b;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(139, 76, 255, 0.1);
+}
+
+.travel-status-card:hover {
+  border-color: #8b4cff;
+  box-shadow: 0 4px 12px rgba(139, 76, 255, 0.1);
+}
+
+.travel-status-card.active {
+  border-color: #8b4cff26;
+  background: #f0e9ff86;
+}
+
+.travel-status-card-title {
+  font-size: 12px;
+  font-weight: 500;
+  color: #666;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.travel-status-card-count {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.travel-status-card-distance {
+  color: #6a049d;
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.travel-status-card-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(139, 76, 255, 0.1);
+  border-radius: 8px;
+  color: #8b4cff;
+}
+
+.travel-status-card.active .travel-status-card-icon {
+  background: rgba(139, 76, 255, 0.2);
+}
+
+.travel-date-header {
+  display: flex;
+  /* flex-direction: column-reverse; */
+  align-items: start;
+  gap: 20px;
+  padding: 12px 20px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  height: 56px;
+  flex-shrink: 0;
+}
+
+.travel-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.travel-header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: -3px;
+}
+
+.travel-today-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border: 1px solid #d0d4dc;
+  border-radius: 6px;
+  background: transparent;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 13px;
+}
+.travel-today-btn svg {
+  width: 16px;
+  height: 16px;
+  color: #6b7280;
+}
+
+.prev-button {
+  background: transparent;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1px 6px;
+  cursor: pointer;
+  /* color: #4b5563; */
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.prev-button-btn svg {
+  width: 16px;
+  height: 16px;
+  color: red !important;
+}
+.nxt-button {
+  background: transparent;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1px 6px;
+  cursor: pointer;
+  color: #4b5563;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.travel-date-range {
+  font-weight: 500;
+  font-size: 15px;
+  color: #111827;
+}
+
+/* Week Days Container */
+.week-days-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 20px 0;
+  margin-bottom: 10px;
+  overflow-x: auto;
+  flex-wrap: wrap;
+}
+
+.show-all-btn {
+  padding: 8px 16px;
+  background-color: #f5f5f5;
+  color: #666;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 13px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.show-all-btn:hover {
+  background-color: #efefef;
+  border-color: #8b4cff;
+}
+
+.show-all-btn.active {
+  background-color: #8b4cff;
+  color: white;
+  border-color: #8b4cff;
+}
+
+/* Week Days */
+.week-days {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.day-btn {
+  padding: 8px 16px;
+  background-color: transparent;
+  border: 1px solid #d0cdff;
+  color: #5c3d9e;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 13px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.day-btn:hover {
+  background-color: #b8adff6e;
+  /* transform: translateY(-2px); */
+}
+
+.day-btn.active {
+  background-color: #8b4cff;
+  color: white;
+  border-color: #8b4cff;
+  box-shadow: 0 4px 12px rgba(139, 76, 255, 0.2);
+}
+
+/* Filter Info */
+.filter-info {
+  padding: 12px 16px;
+  background: #f0e9ff;
+  border-left: 4px solid #8b4cff;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.filter-info p {
+  margin: 0;
+  font-size: 13px;
+  color: #5c3d9e;
+  font-weight: 500;
+}
+
+.filter-info strong {
+  font-weight: 600;
+  color: #8b4cff;
+}
+
+/* Travel Logistics Content */
+.travel-logistics-content {
+  position: relative;
+  padding: 0;
+  width: 100%;
+  min-height: 200px;
+}
+
+/* Grid Layout */
+.travel-logistics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  width: 100%;
+}
+
+/* Travel Items */
+.travel-logistics-items {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04);
+  border-left: 3px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.travel-logistics-items:hover {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.travel-status-item-completed {
+  border-left-color: #20a120;
+}
+
+.travel-status-item-completed:hover {
+  border-left-color: #20a120;
+  background: #f0fdf4;
+}
+
+.travel-status-item-missed {
+  border-left-color: #cf2626;
+}
+
+.travel-status-item-missed:hover {
+  border-left-color: #cf2626;
+  background: #fef2f2;
+}
+
+/* Travel Item Content */
+.travel-item-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.travel-info-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.travel-client-name {
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0;
+  color: #333;
+  line-height: 1.4;
+}
+
+.travel-client-desc {
+  font-size: 12px;
+  margin: 0;
+  color: #666;
+  line-height: 1.3;
+}
+.travel-client-date {
+  font-size: 12px;
+  margin: 0;
+  color: #666;
+  line-height: 1.3;
+}
+
+/* Travel Specs */
+.travel-specs {
+  display: flex;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.travel-mode {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #555;
+}
+
+.travel-mode svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.travel-mode p {
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Travel Status */
+.travel-status {
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 500;
+  padding-top: 18px;
+  /* border-top: 1px solid #e5e7eb; */
+}
+
+.travel-status-icon {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+.travel-status-completed {
+  color: #20a120;
+}
+
+.travel-status-missed {
+  color: #cf2626;
+}
+
+/* No Data Message */
+.no-data-message {
+  grid-column: 1 / -1;
+  padding: 40px 20px;
+  text-align: center;
+  color: #999;
+  font-size: 16px;
+  font-weight: 500;
+  background: #f9f9f9;
+  border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .travel-logistics-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .travel-logistics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .travel-logistics-items {
+    padding: 12px;
+  }
+
+  .travel-client-name {
+    font-size: 13px;
+  }
+
+  .travel-client-desc {
+    font-size: 11px;
+  }
+
+  .requests-list-status-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .week-days-container {
+    padding: 15px 0;
+    margin-bottom: 15px;
+  }
+
+  .day-btn {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+
+  .show-all-btn {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .travel-logistics-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .travel-logistics-items {
+    padding: 10px;
+  }
+
+  .requests-list-status-cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .travel-client-name {
+    font-size: 12px;
+  }
+
+  .travel-client-desc {
+    font-size: 10px;
+  }
+
+  .travel-status-card-count {
+    font-size: 24px;
+  }
+
+  .week-days-container {
+    gap: 8px;
+    padding: 10px 0;
+  }
+
+  .day-btn,
+  .show-all-btn {
+    padding: 6px 10px;
+    font-size: 10px;
+  }
+
+  .travel-status-card-title {
+    font-size: 11px;
+  }
+}

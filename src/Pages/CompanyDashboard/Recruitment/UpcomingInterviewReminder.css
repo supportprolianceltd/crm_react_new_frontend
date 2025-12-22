@@ -1,0 +1,80 @@
+.interview-popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 16px;
+  max-width: 320px;
+  width: 100%;
+  z-index: 1000;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.popup-header strong {
+  font-size: 16px;
+  color: #1a1a1a;
+}
+
+.popup-header button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #666;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: color 0.2s ease;
+}
+
+.popup-header button:hover {
+  color: #000;
+}
+
+.interview-popup p {
+  margin: 0 0 12px;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.4;
+}
+
+.interview-popup p b {
+  font-weight: 600;
+}
+
+.view-btn {
+  width: 100%;
+  padding: 8px 16px;
+  background-color: #7226ff; /* Default */
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.view-btn:hover {
+  background-color: #5a1fcc; /* Slightly darker for hover */
+}
+
+.view-btn:active {
+  background-color: #4a19a3; /* Even darker when pressed */
+  transform: scale(0.97); /* Subtle press effect */
+}
+
+/* Disabled state */
+.view-btn:disabled {
+  background-color: #ccc; /* Gray out */
+  color: #666;
+  cursor: not-allowed;
+  opacity: 0.7;
+}

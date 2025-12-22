@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo isset($page_title) ? $page_title : 'Feedback Form'; ?></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            padding: 40px;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .required {
+            color: #e74c3c;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 15px;
+            transition: border-color 0.3s;
+        }
+        
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="date"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .radio-option {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .radio-option:hover {
+            border-color: #667eea;
+            background: #f8f9ff;
+        }
+        
+        .radio-option input[type="radio"] {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        
+        .radio-option input[type="radio"]:checked + label {
+            color: #667eea;
+            font-weight: 600;
+        }
+        
+        .radio-option label {
+            margin: 0;
+            cursor: pointer;
+            flex: 1;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .error-message {
+            background: #fee;
+            color: #c33;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border-left: 4px solid #c33;
+        }
+        
+        .conditional-field {
+            margin-left: 20px;
+            padding-left: 20px;
+            border-left: 3px solid #e0e0e0;
+            display: none;
+        }
+        
+        .conditional-field.show {
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Learner Feedback Form</h1>
+        <p class="subtitle">Post-Training Review</p>
+        
+        <?php if (validation_errors()): ?>
+            <div class="error-message">
+                <?php echo validation_errors(); ?>
+            </div>
+        <?php endif; ?>
+        
+        <?php echo form_open('feedback/submit', ['id' => 'feedbackForm']); ?>
+        
+        <!-- Basic Information -->
+        <div class="section">
+            <div class="form-group">
+                <label>Full Name <span class="required">*</span></label>
+                <input type="text" name="full_name" value="<?php echo set_value('full_name'); ?>" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Email Address <span class="required">*</span></label>
+                <input type="email" name="email" value="<?php echo set_value('email'); ?>" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Course/Training Completed <span class="required">*</span></label>
+                <input type="text" name="course_completed" value="<?php echo set_value('course_completed'); ?>" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Instructor/Assessor Name <span class="required">*</span></label>
+                <input type="text" name="instructor_name" value="<?php echo set_value('instructor_name'); ?>" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Completion Date <span class="required">*</span></label>
+                <input type="date" name="completion_date" value="<?php echo set_value('completion_date'); ?>" required>
+            </div>
+        </div>
+        
+        <!-- Section 1: Training Experience & Quality -->
+        <div class="section">
+            <h2 class="section-title">Section 1: Training Experience & Quality</h2>
+            
+            <div class="form-group">
+                <label>How well did the training meet your expectations? <span class="required">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" name="training_expectations" value="exceeded" id="exp1" <?php echo set_radio('training_expectations', 'exceeded'); ?> required>
+                        <label for="exp1">Exceeded expectations</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="training_expectations" value="met" id="exp2" <?php echo set_radio('training_expectations', 'met'); ?>>
+                        <label for="exp2">Met expectations</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="training_expectations" value="somewhat" id="exp3" <?php echo set_radio('training_expectations', 'somewhat'); ?>>
+                        <label for="exp3">Somewhat met expectations</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="training_expectations" value="not_met" id="exp4" <?php echo set_radio('training_expectations', 'not_met'); ?>>
+                        <label for="exp4">Did not meet expectations</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>How would you rate the overall quality of the training materials and resources provided? <span class="required">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" name="material_quality" value="excellent" id="qual1" <?php echo set_radio('material_quality', 'excellent'); ?> required>
+                        <label for="qual1">Excellent</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="material_quality" value="good" id="qual2" <?php echo set_radio('material_quality', 'good'); ?>>
+                        <label for="qual2">Good</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="material_quality" value="fair" id="qual3" <?php echo set_radio('material_quality', 'fair'); ?>>
+                        <label for="qual3">Fair</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="material_quality" value="poor" id="qual4" <?php echo set_radio('material_quality', 'poor'); ?>>
+                        <label for="qual4">Poor</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>How supportive and engaging was your instructor/assessor during your training? <span class="required">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" name="instructor_support" value="extremely" id="sup1" <?php echo set_radio('instructor_support', 'extremely'); ?> required>
+                        <label for="sup1">Extremely supportive and engaging</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="instructor_support" value="supportive" id="sup2" <?php echo set_radio('instructor_support', 'supportive'); ?>>
+                        <label for="sup2">Supportive</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="instructor_support" value="somewhat" id="sup3" <?php echo set_radio('instructor_support', 'somewhat'); ?>>
+                        <label for="sup3">Somewhat supportive</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="instructor_support" value="not_supportive" id="sup4" <?php echo set_radio('instructor_support', 'not_supportive'); ?>>
+                        <label for="sup4">Not supportive</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>How satisfied are you with the communication and support you received from our team throughout your training? <span class="required">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" name="communication_satisfaction" value="very_satisfied" id="comm1" <?php echo set_radio('communication_satisfaction', 'very_satisfied'); ?> required>
+                        <label for="comm1">Very satisfied</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="communication_satisfaction" value="satisfied" id="comm2" <?php echo set_radio('communication_satisfaction', 'satisfied'); ?>>
+                        <label for="comm2">Satisfied</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="communication_satisfaction" value="neutral" id="comm3" <?php echo set_radio('communication_satisfaction', 'neutral'); ?>>
+                        <label for="comm3">Neutral</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="communication_satisfaction" value="dissatisfied" id="comm4" <?php echo set_radio('communication_satisfaction', 'dissatisfied'); ?>>
+                        <label for="comm4">Dissatisfied</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Was the course content relevant and applicable to your professional or personal goals? <span class="required">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" name="content_relevance" value="very_relevant" id="rel1" <?php echo set_radio('content_relevance', 'very_relevant'); ?> required>
+                        <label for="rel1">Very relevant</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="content_relevance" value="relevant" id="rel2" <?php echo set_radio('content_relevance', 'relevant'); ?>>
+                        <label for="rel2">Relevant</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="content_relevance" value="somewhat" id="rel3" <?php echo set_radio('content_relevance', 'somewhat'); ?>>
+                        <label for="rel3">Somewhat relevant</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="content_relevance" value="not_relevant" id="rel4" <?php echo set_radio('content_relevance', 'not_relevant'); ?>>
+                        <label for="rel4">Not relevant</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Section 2: Learner Impact & Outcome -->
+        <div class="section">
+            <h2 class="section-title">Section 2: Learner Impact & Outcome</h2>
+            
+            <div class="form-group">
+                <label>Do you feel more confident or skilled after completing your training? <span class="required">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" name="confidence_gained" value="yes_definitely" id="conf1" <?php echo set_radio('confidence_gained', 'yes_definitely'); ?> required>
+                        <label for="conf1">Yes, definitely</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="confidence_gained" value="somewhat" id="conf2" <?php echo set_radio('confidence_gained', 'somewhat'); ?>>
+                        <label for="conf2">Somewhat</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="confidence_gained" value="not_sure" id="conf3" <?php echo set_radio('confidence_gained', 'not_sure'); ?>>
+                        <label for="conf3">Not sure</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Has the training made a positive impact on your job performance or career growth? <span class="required">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" name="career_impact" value="yes_significantly" id="impact1" <?php echo set_radio('career_impact', 'yes_significantly'); ?> required>
+                        <label for="impact1">Yes, significantly</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="career_impact" value="yes_somewhat" id="impact2" <?php echo set_radio('career_impact', 'yes_somewhat'); ?>>
+                        <label for="impact2">Yes, to some extent</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="career_impact" value="not_yet" id="impact3" <?php echo set_radio('career_impact', 'not_yet'); ?>>
+                        <label for="impact3">Not yet</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>How likely are you to apply the knowledge and skills gained in your current or future role? <span class="required">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" name="knowledge_application" value="very_likely" id="app1" <?php echo set_radio('knowledge_application', 'very_likely'); ?> required>
+                        <label for="app1">Very likely</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="knowledge_application" value="likely" id="app2" <?php echo set_radio('knowledge_application', 'likely'); ?>>
+                        <label for="app2">Likely</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="knowledge_application" value="unsure" id="app3" <?php echo set_radio('knowledge_application', 'unsure'); ?>>
+                        <label for="app3">Unsure</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Section 3: Overall Experience -->
+        <div class="section">
+            <h2 class="section-title">Section 3: Overall Experience</h2>
+            
+            <div class="form-group">
+                <label>What did you enjoy most about your experience with us? <span class="required">*</span></label>
+                <textarea name="enjoyed_most" required><?php echo set_value('enjoyed_most'); ?></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>What area(s) do you think we could improve to make our services even better?</label>
+                <textarea name="improvement_areas"><?php echo set_value('improvement_areas'); ?></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Would you recommend our services to others? <span class="required">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" name="would_recommend" value="yes" id="rec1" <?php echo set_radio('would_recommend', 'yes'); ?> required>
+                        <label for="rec1">Yes, absolutely</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="would_recommend" value="maybe" id="rec2" <?php echo set_radio('would_recommend', 'maybe'); ?>>
+                        <label for="rec2">Maybe later</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="would_recommend" value="no" id="rec3" <?php echo set_radio('would_recommend', 'no'); ?>>
+                        <label for="rec3">No</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group conditional-field" id="recommendationMessage">
+                <label>If you answered Yes, what would you tell others about your experience?</label>
+                <textarea name="recommendation_message"><?php echo set_value('recommendation_message'); ?></textarea>
+            </div>
+        </div>
+        
+        <!-- Section 4: Permissions & Follow-Up -->
+        <div class="section">
+            <h2 class="section-title">Section 4: Permissions & Follow-Up</h2>
+            
+            <div class="form-group">
+                <label>May we share your feedback publicly (e.g. Trustpilot or our website)? <span class="required">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" name="share_publicly" value="yes" id="share1" <?php echo set_radio('share_publicly', 'yes'); ?> required>
+                        <label for="share1">Yes, I agree</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="share_publicly" value="no" id="share2" <?php echo set_radio('share_publicly', 'no'); ?>>
+                        <label for="share2">No</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Would you like us to contact you for follow-up, additional support, or future training opportunities? <span class="required">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" name="contact_followup" value="yes" id="follow1" <?php echo set_radio('contact_followup', 'yes'); ?> required>
+                        <label for="follow1">Yes</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" name="contact_followup" value="no" id="follow2" <?php echo set_radio('contact_followup', 'no'); ?>>
+                        <label for="follow2">No</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <button type="submit" class="submit-btn">Submit Feedback</button>
+        
+        <?php echo form_close(); ?>
+    </div>
+    
+    <script>
+        // Show/hide recommendation message field
+        document.querySelectorAll('input[name="would_recommend"]').forEach(function(radio) {
+            radio.addEventListener('change', function() {
+                const messageField = document.getElementById('recommendationMessage');
+                if (this.value === 'yes') {
+                    messageField.classList.add('show');
+                } else {
+                    messageField.classList.remove('show');
+                }
+            });
+        });
+        
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const selectedRecommend = document.querySelector('input[name="would_recommend"]:checked');
+            if (selectedRecommend && selectedRecommend.value === 'yes') {
+                document.getElementById('recommendationMessage').classList.add('show');
+            }
+        });
+    </script>
+</body>
+</html>

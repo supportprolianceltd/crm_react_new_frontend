@@ -1,0 +1,140 @@
+
+/* OverViewGraphs-Seec */
+
+.OverViewGraphs-Seec{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+    gap: 20px;
+}
+
+.OverViewGraphs-Card{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: #fff;
+    border-radius: 10px;
+    min-height: 100px;
+    border: 1px solid #e7e2f7;
+}
+
+
+
+
+.OVG-Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding:12px 20px;
+  border-bottom: 1px solid #EBECF0;
+}
+
+.OVG-Header-L h3{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.OVG-Header-R{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+.OVG-Header-R p{
+    font-size: 9px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #ebe6ff;
+    color: #7226FF;
+    overflow: hidden;
+    border-radius: 30px;
+    padding: 0px 9px;
+}
+.OVG-Header-R p span{
+    padding:4px 0px;
+}
+.OVG-Header-R p span:first-child{
+    border-right: 1px solid #FBC9FF;
+    padding-right: 5px;
+    text-transform: uppercase;
+}
+
+.OVG-Header-R button,
+.OVG-Header-R a{
+    position: relative;
+    padding: 8px 13px;
+    display: inline-flex;
+    align-items: center;
+    color: #5B616D;
+    border:1px solid #D0D5DD;
+    border-radius: 8px;
+    font-size: 10px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+    gap: 5px;
+    user-select: none;
+    cursor: pointer;
+}
+.OVG-Header-R button:hover,
+.OVG-Header-R a:hover{
+    background-color: #f7f5ff;
+}
+
+.OVG-Header-R button svg{
+  width: 13px;
+}
+
+
+.OVG-Tabs {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+  padding: 5px 20px;
+}
+
+.OVG-Tab {
+  padding: 6px 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #5B616D;
+  font-weight: 500;
+  border-radius: 6px;
+  font-size: 11px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.OVG-Tab.active {
+ color: #7c3aed;
+ background-color: #f7f5ff;
+}
+.OVG-Tab:hover{
+  background-color: #f7f5ff;
+}
+
+
+.OVG-Chart {
+  background: linear-gradient(to top, #f9f5ff 0%, #ffffff 100%);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+

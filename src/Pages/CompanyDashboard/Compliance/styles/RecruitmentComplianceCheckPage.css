@@ -1,0 +1,333 @@
+.compliance-list-page {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 1.5rem;
+}
+
+.compliance-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .compliance-list-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+.compliance-list-title {
+  color: #372580;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.compliance-list-description {
+  border-bottom: 1px solid #ebecf0;
+  color: #5b616d;
+  font-size: 13px;
+  padding-bottom: 0.4rem;
+}
+
+.compliance-list-statistics-cards-container {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+@media (max-width: 768px) {
+  .compliance-list-statistics-cards-container {
+    flex-direction: column !important;
+  }
+}
+
+.compliance-list-statistics-card {
+  flex: 2 !important;
+  background-color: #fff !important;
+  border-radius: 10px !important;
+  padding: 1rem !important;
+
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.compliance-list-statistics-title {
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: #372580 !important;
+  margin-bottom: 0.3rem !important;
+}
+
+.compliance-list-statistics-count {
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  color: #1a1a66 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.compliance-list-statistics-percentage {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.3rem !important;
+  font-size: 0.8rem !important;
+  color: green !important;
+}
+
+.triangle-up {
+  font-size: 0.8rem !important;
+}
+
+.compliance-list-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.search-input-container {
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ebecf0;
+  padding: 12px;
+  width: 50%;
+}
+
+.search-input-container svg {
+  color: #8c929c;
+  margin-right: 5px;
+  width: 18px;
+  height: 18px;
+}
+
+.search-input-container input {
+  background-color: transparent !important;
+  border: none;
+  font-size: 13px;
+  outline: none;
+  flex: 1;
+  width: 100%;
+}
+
+.search-input-container input::placeholder {
+  color: #8c929c;
+}
+
+.add-compliance-button {
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: #7226ff;
+  box-shadow: 0 2px 8px -2px rgba(255, 255, 255, 0.56) inset,
+    0 0 8px -2px rgba(0, 0, 0, 0.24) inset;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.add-compliance-button svg {
+  width: 15px;
+  height: 15px;
+}
+
+.compliance-list-table {
+  background-color: #fff;
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 16px;
+  margin-top: 0.5rem;
+  padding-inline: 1rem;
+}
+
+/* Actions styles */
+.actions-cell {
+  position: relative;
+}
+
+.actions-container {
+  display: flex;
+  justify-content: center;
+}
+
+.actions-button {
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actions-button:hover {
+  background: #f1f5f9;
+}
+
+.actions-popup {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 10;
+  overflow: hidden;
+  min-width: 180px;
+}
+
+.actions-popup button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #334155;
+  font-size: 0.85rem;
+}
+
+.actions-popup button:hover {
+  background: #f8fafc;
+  color: #4f46e5;
+}
+
+/* Skeleton loading animation */
+.skeleton-row td {
+  padding: 1rem;
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  height: 20px;
+  border-radius: 4px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .compliance-list-options {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-input-container {
+    min-width: 100%;
+  }
+
+  .add-compliance-button {
+    justify-content: center;
+  }
+}
+
+.clickable-row {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.clickable-row:hover {
+  background-color: #f5f5f5;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.empty-state-content {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.empty-state-icon {
+  font-size: 3rem;
+  color: #6b7280;
+}
+
+.empty-state-message {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.empty-state-description {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+/* Reset Password Modal styles */
+.credentials-display {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.credential-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9fafb;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.credential-row .label {
+  font-weight: 600;
+  color: #374151;
+  flex: 0 0 80px;
+  text-transform: none !important;
+}
+
+.credential-row .value {
+  flex: 1;
+  font-family: monospace;
+  font-size: 0.95rem;
+  color: #111827;
+  margin-right: 0.5rem;
+  overflow-wrap: anywhere;
+}
+
+.copy-icon {
+  cursor: pointer;
+  color: #6b7280;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.copy-icon:hover {
+  color: #372580;
+  transform: scale(1.1);
+}
+
+.credential-actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}

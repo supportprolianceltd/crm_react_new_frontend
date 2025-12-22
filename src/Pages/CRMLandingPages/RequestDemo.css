@@ -1,0 +1,471 @@
+/* RequestDemo */
+
+.RequestDemo{
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background: #f7f5ff;
+    padding-top: 75px;
+}
+
+.RequestDemo-Main{
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 85vh;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 30px;
+}
+
+
+.AllO-Ramp{
+    position: sticky;
+    top: 75px;
+    left: 0;
+    z-index: 500;
+    width: 100%;
+    height: 85vh;
+}
+
+.AllO-Ramp-Main{
+    position: inherit;
+    top: inherit;
+    left: inherit;
+    z-index: inherit;
+    width: inherit;
+    height: inherit;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+}
+
+.AllO-Ramp-Part-1{
+    position: relative;
+    width: 80px;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.AllO-Ramp-Part-1 span{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding:20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    font-size: 12px;
+    user-select: none;
+    border-bottom: 1px solid #dcdae3;
+    cursor: pointer;
+}
+
+.AllO-Ramp-Part-1 span svg{
+    width: 20px;
+}
+
+.AllO-Ramp-Part-1 span.active-All-RampSpan{
+    background-color: #7226FF;
+    color: #fff;
+}
+
+
+
+
+.AllO-Ramp-Part-2{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.YU-Box{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.YU-Box button{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    border-radius: 10px;
+    background: #ebe6ff;
+    padding: 0px;
+}
+.YU-Box button span{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 11px;
+    height: 11px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border:1px solid #7226FF;
+    border-radius: 4px;
+    color: #fff;
+}
+.YU-Box button span svg{
+    width: 100%;
+    display: none;
+}
+
+.YU-Box button img{
+    max-width: 50%;
+}
+
+.YU-Box.active-YU-Box button span{
+    background-color: #7226FF;
+
+}
+
+.YU-Box.active-YU-Box button span svg{
+    display: inline-flex;
+}
+
+.YU-Box p{
+    font-size: 12px;
+    font-weight: 500;
+}
+
+
+.AllU-Ramp{
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-color: #fff;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    padding:20px;
+}
+
+.Cland-Sec{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.Gllas-Header{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.Gllas-Header h3{
+    font-size: 20px;
+    font-weight: 500;
+}
+.back-to-calendar-btn{
+  position: relative;
+  width: auto;
+  height: 35px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  border: 1px solid #dcdae3;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+  font-size: 12px;
+  padding: 0px 10px;
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.back-to-calendar-btn svg{
+  width: 14px;
+}
+.back-to-calendar-btn:hover{
+  background: #f7f5ff;
+}
+
+
+.Gllas-body{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+/* schedule-Secc */
+
+.schedule-Secc{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+}
+
+.schedule-Main{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.schedule-Part{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    gap: 0px;
+}
+
+.schedule-Part:first-child .schedule-Part-2,
+.schedule-Part:first-child .schedule-Part-1{
+    padding-top: 0px !important;
+}
+
+.schedule-Part-1{
+    position: relative;
+    width: 100%;
+    height: auto;
+    text-align: right;
+    border-right: 1px solid #dcdae3;
+    padding-right: 30px;
+    padding-top: 20px;
+    overflow: hidden;
+}
+
+.schedule-Part-1 span{
+    position: relative;
+    font-size: 12px;
+    padding:8px 13px;
+     background: #ebe6ff;
+    border-radius: 8px;
+    font-weight: 500;
+    display: inline-flex;
+}
+
+.schedule-Part:nth-child(1) .schedule-Part-1 span{
+    background-color: 	#F4F0FF;
+}
+.schedule-Part:nth-child(2) .schedule-Part-1 span{
+    background-color: 	#E8DBFF;
+}
+.schedule-Part:nth-child(3) .schedule-Part-1 span{
+    background-color: 	#E0CCFF;
+}
+.schedule-Part:nth-child(4) .schedule-Part-1 span{
+    background-color: 	#D8BDFF;
+}
+.schedule-Part:nth-child(5) .schedule-Part-1 span{
+    background-color: 	#EFE6FF;
+}
+.schedule-Part:nth-child(6) .schedule-Part-1 span{
+    background-color: 	#F7F3FF;
+}
+.schedule-Part:nth-child(7) .schedule-Part-1 span{
+    background-color: 	#F5E8FF;
+}
+.schedule-Part:nth-child(8) .schedule-Part-1 span{
+    background-color: 	#EAE0FF;
+}
+.schedule-Part-2{
+    position: relative;
+    width: 100%;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+.schedule-Part-2 p{
+    font-size: 14px;
+}
+
+
+.schedule-Part-2 h3{
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.schedule-Part-2 textarea{
+    position: relative;
+    width: 100%;
+    background: #f7f5ff;
+    line-height: 25px;
+    resize: none;
+    border-radius: 8px;
+    border: 1px solid #dcdae3;
+}
+
+.schedule-Part-2 textarea:focus{
+    border: 2px solid #cfb8fa !important;
+    /* box-shadow: 0 0 10px rgba(114, 38, 255, 0.3) !important;
+    -webkit-box-shadow: 0 0 10px rgba(114, 38, 255, 0.3) !important;
+    -moz-box-shadow: 0 0 10px rgba(114, 38, 255, 0.3) !important; */
+    background-color: #fff;
+}
+
+
+.send-req-btn{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.specil-pl p{
+    font-style: italic;
+    margin-top: 15px;
+    font-size: 12px;
+    color: #8479af !important;
+}
+
+.specil-pl p a{
+    color: #7226FF;
+    font-weight: 500;
+}
+
+.specil-pl p a:hover{
+    text-decoration: underline;
+}
+
+
+.ddde-Footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 30px 0px;
+    text-align: center;
+}
+
+.ddde-Footer p{
+    font-size: 13px;
+}
+
+
+/* success-Secc */
+
+.success-Secc{
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.success-Secc-Box{
+    position: relative;
+    width: 500px;
+    height: auto;
+    text-align: center;
+}
+.success-Secc-Box img{
+    max-width: 200px;
+}
+.success-Secc-Box h3{
+    margin-bottom: 30px;
+}
+
+.success-Secc-Box p{
+    font-size: 13px;
+    margin-bottom:20px;
+    line-height: 25px;
+    color: #696090 !important;
+}
+
+.success-Secc-Box h6{
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.success-Secc-Box h6 a{
+    color: #7226FF;
+    text-decoration: underline;
+}
+
+.backhome-btn{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.custom-alert {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color:  #fbcfff; /* yellow-300 */
+  color:  #971ba2;
+  border:1px solid #D726FF;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 12px;
+  z-index: 9999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}

@@ -471,7 +471,7 @@ const EmployeeDetailsView = ({
           if (source.profile?.system_access_compliance)
             selections.push("compliance");
           if (source.profile?.system_access_asset_management)
-            selections.push("asset_management");
+            selections.push("Assets Management");
           return selections;
         })(),
         systemAdminAccess: source.profile?.system_access_co_superadmin || false,

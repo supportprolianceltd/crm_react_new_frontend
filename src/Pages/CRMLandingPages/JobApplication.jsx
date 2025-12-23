@@ -632,9 +632,24 @@ function JobApplication() {
 
       setIsSubmitting(false);
       setSuccessMessage("Application submitted successfully!");
+      // Clear the form after success
+      setFormData({
+        fullName: "",
+        email: "",
+        confirmEmail: "",
+        phone: "",
+        qualification: "",
+        date_of_birth: "",
+        experience: "",
+        knowledgeSkill: "",
+        coverLetter: "",
+      });
+      setUploadedFile(null);
+      setDocuments([]);
+      setAvailableDocTypes(job.documents_required || []);
+      setSelectedResumeType("");
       setTimeout(() => {
         setSuccessMessage("");
-        window.location.reload();
       }, 3000);
     } catch (err) {
       console.log(err.message);

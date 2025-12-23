@@ -42,7 +42,6 @@ const ClusterTable = ({
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
-                <th>Role</th>
                 <th>Phone</th>
                 <th>Address</th>
                 <th>City</th>
@@ -54,7 +53,7 @@ const ClusterTable = ({
             <tbody>
               {isLoading ? (
                 <tr>
-                  <td colSpan={10} style={{ textAlign: 'center', padding: '20px' }}>
+                  <td colSpan={9} style={{ textAlign: 'center', padding: '20px' }}>
                     <div>Creating employees...</div>
                   </td>
                 </tr>
@@ -89,19 +88,6 @@ const ClusterTable = ({
                         onChange={(e) => handleFieldChange(index, 'workEmail', e.target.value)}
                         style={{ width: '100%', border: 'none', background: 'transparent' }}
                       />
-                    </td>
-                    <td>
-                      <select
-                        value={item.role}
-                        onChange={(e) => handleFieldChange(index, 'role', e.target.value)}
-                        style={{ width: '100%', border: 'none', background: 'transparent' }}
-                      >
-                        <option value="staff">Staff</option>
-                        <option value="carer">Carer</option>
-                        <option value="hr">HR</option>
-                        <option value="admin">Admin</option>
-                        <option value="co-admin">Co-Admin</option>
-                      </select>
                     </td>
                     <td>
                       <input
@@ -187,7 +173,7 @@ const ClusterTable = ({
                 })
               ) : (
                 <tr>
-                  <td colSpan={10}>
+                  <td colSpan={9}>
                     No {currentView === "employees" ? "employees" : "carers"} available
                   </td>
                 </tr>
@@ -271,7 +257,7 @@ export default function BulkUploadEmployees({
         password: item.password,
         first_name: item.firstName,
         last_name: item.lastName,
-        role: item.role || "staff",
+        role: "staff",
         profile: {
           zip_code: item.postalCode,
           street: item.address,
@@ -353,7 +339,7 @@ export default function BulkUploadEmployees({
         const workbook = XLSX.read(data, { type: 'array' });
         const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
         const jsonData = XLSX.utils.sheet_to_json(firstSheet);
-        console.log('Uploaded employees data:', jsonData);
+        // console.log('Uploaded employees data:', jsonData);
         // Process jsonData for ClusterTable, matching personal info fields
         const processedData = jsonData.map((row, index) => {
           const phoneMatch = row['Phone'] ? row['Phone'].match(/^(\+\d{1,3})(\s*(\d[\s-]*)*\d)$/) : null;
@@ -362,7 +348,6 @@ export default function BulkUploadEmployees({
             firstName: row['First Name'] || '',
             lastName: row['Last Name'] || '',
             workEmail: row['Email'] || '',
-            role: row['Role'] || '',
             workPhoneCode: phoneMatch ? phoneMatch[1] : '+1',
             workPhone: phoneMatch ? phoneMatch[2].replace(/\D/g, '') : '',
             address: row['Address'] || '',

@@ -239,6 +239,7 @@ const EmployeeDetailsView = ({
         firstName: source.first_name || "",
         lastName: source.last_name || "",
         role: source.role || "",
+        manage_permission: source.manage_permission || false,
         email: source.email || "",
         workPhone: source.profile?.work_phone || "",
         personalPhone: source.profile?.personal_phone || "",
@@ -588,22 +589,15 @@ const EmployeeDetailsView = ({
   const handleInputChange = (section, field, value, index = null) => {
     setFormData((prev) => {
       if (!prev) return prev;
+      let updated = { ...prev };
       if (section === "personal") {
-        return {
-          ...prev,
+        updated[field] = value;
+      } else if (section === "nextOfKin") {
+        updated.nextOfKin = {
+          ...prev.nextOfKin,
           [field]: value,
         };
-      }
-      if (section === "nextOfKin") {
-        return {
-          ...prev,
-          nextOfKin: {
-            ...prev.nextOfKin,
-            [field]: value,
-          },
-        };
-      }
-      if (index !== null) {
+      } else if (index !== null) {
         const arraySections = [
           "employmentDetails",
           "educationDetails",
@@ -629,24 +623,15 @@ const EmployeeDetailsView = ({
                 [index]: new Set(prev[arrayField][index] || []).add(field),
               },
             }));
-            return {
-              ...prev,
-              [arrayField]: updatedArray,
-            };
+            updated[arrayField] = updatedArray;
           }
         }
+      } else if (section === null && field === 'role') {
+        updated.role = value;
+      } else {
+        updated[field] = value;
       }
-      // If section is null and field is 'role', set at top level
-      if (section === null && field === 'role') {
-        return {
-          ...prev,
-          role: value,
-        };
-      }
-      return {
-        ...prev,
-        [field]: value,
-      };
+      return updated;
     });
     setHasChanges(true);
   };
@@ -1791,6 +1776,9 @@ const EmployeeDetailsView = ({
             )
               permissionsPayload.is_sync_with_roster =
                 formData.isSyncWithRoster;
+            // Check manage_permission
+            if (formData.manage_permission !== employee.manage_permission)
+              permissionsTopLevelPayload.manage_permission = formData.manage_permission;
           }
           const permissionsUpdatePayload = {};
           if (Object.keys(permissionsPayload).length > 0) {
@@ -2689,7 +2677,7 @@ const EmployeeDetailsView = ({
     "Bank Details",
     "Proof of Address",
     "Driving License & DBS Verification",
-    ...(userRole === "root-admin"
+    ...(userRole === "root-admin" || (userRole === "co-admin" && user.manage_permission)
       ? ["Permissions"]
       : []),
     `${isProfileView ? "My" : "Employee"} Documents`,

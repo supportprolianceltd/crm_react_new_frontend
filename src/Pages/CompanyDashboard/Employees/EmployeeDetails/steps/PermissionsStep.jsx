@@ -165,6 +165,19 @@ const PermissionsStep = ({
               )}
             </div>
           )}
+          {formData.role === "co-admin" && (
+            <div className="info-item">
+              <label>Can Manage Permissions?</label>
+              {isEditing.permissions ? (
+                <ToggleButton
+                  isOn={formData.manage_permission || false}
+                  onToggle={(isOn) => handleInputChange("permissions", "manage_permission", isOn)}
+                />
+              ) : (
+                <span>{formData.manage_permission ? "Yes" : "No"}</span>
+              )}
+            </div>
+          )}
         </div>
 
         {(() => {

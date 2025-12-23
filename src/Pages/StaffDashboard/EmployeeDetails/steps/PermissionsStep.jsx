@@ -111,6 +111,17 @@ const PermissionsStep = ({
               )}
             </div>
           )}
+          <div className="info-item">
+            <label>Manage Permission</label>
+            {isEditing.permissions ? (
+              <ToggleButton
+                isOn={formData.manage_permission || false}
+                onToggle={(isOn) => handleInputChange("permissions", "manage_permission", isOn)}
+              />
+            ) : (
+              <span>{formData.manage_permission ? "Yes" : "No"}</span>
+            )}
+          </div>
           {/* <div className="info-item">
             <label>Sync with Roster</label>
             {isEditing.permissions ? (

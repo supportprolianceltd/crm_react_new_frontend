@@ -188,8 +188,6 @@ const JobAdvert = () => {
   };
 
 
-  // console.log("qwertyuioiuytrewertyuio")
-
   // Fetch jobs from API
   useEffect(() => {
     const fetchJobs = async () => {

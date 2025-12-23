@@ -10,7 +10,15 @@ import {
   getFileExtension,
 } from "../../../../../utils/helpers";
 
-export const days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+export const days = [
+  "monday",
+  "tuesday",
+  "wednesday",
+  "thursday",
+  "friday",
+  "saturday",
+  "sunday",
+];
 
 // System access options - updated to match new payload
 export const systemAccessOptions = [
@@ -25,7 +33,7 @@ export const systemAccessOptions = [
 
 export const systemAdminAccessOptions = [
   { label: "Co-Admin", value: "co-admin" },
- ];
+];
 
 export const AvailabilityGrid = ({ value = {}, onChange }) => {
   const defaultAvailability = days.reduce((acc, day) => {
@@ -79,8 +87,19 @@ export const AvailabilityGrid = ({ value = {}, onChange }) => {
   return (
     <div className="availability-grid">
       {days.map((day) => (
-        <div key={day} className="day-row" style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
-          <div className="day-label" style={{ width: '100px', fontWeight: 'bold' }}>
+        <div
+          key={day}
+          className="day-row"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            marginBottom: "10px",
+          }}
+        >
+          <div
+            className="day-label"
+            style={{ width: "100px", fontWeight: "bold" }}
+          >
             {day.charAt(0).toUpperCase() + day.slice(1)}
           </div>
           <ToggleButton
@@ -92,14 +111,14 @@ export const AvailabilityGrid = ({ value = {}, onChange }) => {
               <input
                 type="time"
                 value={availability[day].start}
-                onChange={(e) => handleTimeChange(day, 'start', e.target.value)}
-                style={{ marginLeft: '10px' }}
+                onChange={(e) => handleTimeChange(day, "start", e.target.value)}
+                style={{ marginLeft: "10px" }}
               />
-              <span style={{ margin: '0 5px' }}>to</span>
+              <span style={{ margin: "0 5px" }}>to</span>
               <input
                 type="time"
                 value={availability[day].end}
-                onChange={(e) => handleTimeChange(day, 'end', e.target.value)}
+                onChange={(e) => handleTimeChange(day, "end", e.target.value)}
               />
             </>
           )}
@@ -121,27 +140,31 @@ const DrivingStatusDetailsStep = ({
 }) => {
   function sanitizeFileName(name) {
     return name
-      .replace(/[^a-zA-Z0-9._-]/g, '_')  // Replace any char that's not letter, number, dot, underscore, hyphen with _
-      .replace(/_{2,}/g, '_')           // Replace multiple _ with single
-      .replace(/^_+|_+$/g, '');         // Remove leading/trailing _
+      .replace(/[^a-zA-Z0-9._-]/g, "_") // Replace any char that's not letter, number, dot, underscore, hyphen with _
+      .replace(/_{2,}/g, "_") // Replace multiple _ with single
+      .replace(/^_+|_+$/g, ""); // Remove leading/trailing _
   }
 
   const handleSanitizedDrivingLicenseFrontChange = (file) => {
-    if (file && typeof handleDrivingLicenseFrontChange === 'function') {
+    if (file && typeof handleDrivingLicenseFrontChange === "function") {
       const sanitizedName = sanitizeFileName(file.name);
-      const sanitizedFile = new File([file], sanitizedName, { type: file.type });
+      const sanitizedFile = new File([file], sanitizedName, {
+        type: file.type,
+      });
       handleDrivingLicenseFrontChange(sanitizedFile);
-    } else if (typeof handleDrivingLicenseFrontChange === 'function') {
+    } else if (typeof handleDrivingLicenseFrontChange === "function") {
       handleDrivingLicenseFrontChange(file);
     }
   };
 
   const handleSanitizedDrivingLicenseBackChange = (file) => {
-    if (file && typeof handleDrivingLicenseBackChange === 'function') {
+    if (file && typeof handleDrivingLicenseBackChange === "function") {
       const sanitizedName = sanitizeFileName(file.name);
-      const sanitizedFile = new File([file], sanitizedName, { type: file.type });
+      const sanitizedFile = new File([file], sanitizedName, {
+        type: file.type,
+      });
       handleDrivingLicenseBackChange(sanitizedFile);
-    } else if (typeof handleDrivingLicenseBackChange === 'function') {
+    } else if (typeof handleDrivingLicenseBackChange === "function") {
       handleDrivingLicenseBackChange(file);
     }
   };
@@ -175,7 +198,10 @@ const DrivingStatusDetailsStep = ({
 
   // Set role to "co-admin" when System Admin Access is toggled on and Co-Admin is selected
   useEffect(() => {
-    if (formData.systemAdminAccess && formData.systemAdminAccessSelections.includes("co-admin")) {
+    if (
+      formData.systemAdminAccess &&
+      formData.systemAdminAccessSelections.includes("co-admin")
+    ) {
       handleChange({
         target: {
           name: "role",
@@ -183,7 +209,11 @@ const DrivingStatusDetailsStep = ({
         },
       });
     }
-  }, [formData.systemAdminAccess, formData.systemAdminAccessSelections, handleChange]);
+  }, [
+    formData.systemAdminAccess,
+    formData.systemAdminAccessSelections,
+    handleChange,
+  ]);
 
   const handleSystemAccessChange = (selectedValues) => {
     setSystemAccessSelections(selectedValues);
@@ -472,7 +502,6 @@ const DrivingStatusDetailsStep = ({
       {/* PERMISSIONS SECTION */}
       <div className="form-section">
         <h3>Permission</h3>
-
 
         <div className="compliance-item">
           <ToggleButton

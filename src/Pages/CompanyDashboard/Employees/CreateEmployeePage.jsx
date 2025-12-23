@@ -444,7 +444,7 @@ export default function CreateEmployeePage() {
       "referee2PhoneCode",
       "referee2Relationship",
     ],
-    4: ["drivingStatus"],
+    4: [],
     5: [],
   };
   const LOCAL_STORAGE_KEY = "employeeFormData";
@@ -1368,15 +1368,28 @@ export default function CreateEmployeePage() {
               type_of_vehicle: formData.vehicleType,
               drivers_licence_country_of_issue:
                 formData.countryOfDrivingLicenseIssue,
-              drivers_licence_date_issue: formData.drivingLicenseIssueDate,
-              drivers_licence_expiry_date: formData.drivingLicenseExpiryDate,
+
+              drivers_licence_date_issue:
+                formData.drivingLicenseIssueDate === ""
+                  ? null
+                  : formData.drivingLicenseIssueDate,
+
+              drivers_licence_expiry_date:
+                formData.drivingLicenseExpiryDate === ""
+                  ? null
+                  : formData.drivingLicenseExpiryDate,
+
               drivers_licence_policy_number: formData.policyNumber,
               drivers_licence_issuing_authority:
                 formData.driversLicenseIssuingAuthority,
               drivers_licence_insurance_provider:
                 formData.driversLicenseInsuranceProvider,
+
               drivers_licence_insurance_expiry_date:
-                formData.driversLicenseInsuranceExpiryDate,
+                formData.driversLicenseInsuranceExpiryDate === ""
+                  ? null
+                  : driversLicenseInsuranceExpiryDate,
+
               system_access_rostering:
                 formData.systemAccessSelections.includes("rostering"),
               system_access_hr: formData.systemAccessSelections.includes("hr"),

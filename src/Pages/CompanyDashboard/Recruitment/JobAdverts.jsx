@@ -188,7 +188,7 @@ const JobAdvert = () => {
   };
 
 
-  console.log("qwertyuioiuytrewertyuio")
+  // console.log("qwertyuioiuytrewertyuio")
 
   // Fetch jobs from API
   useEffect(() => {

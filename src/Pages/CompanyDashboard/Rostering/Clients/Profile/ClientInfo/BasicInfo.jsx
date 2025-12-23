@@ -15,6 +15,11 @@ const BasicInfo = ({ clientData }) => {
       })
     : "N/A";
 
+    // console.log("clientData")
+    // console.log(clientData)
+    // console.log(clientData)
+    // console.log("clientData")
+
   return (
     <div className="Info-Palt">
       <div className="Info-Palt-Top">
@@ -26,7 +31,7 @@ const BasicInfo = ({ clientData }) => {
       <div className="Info-Palt-Main">
         <div className="Info-TTb-BS">
           <div className="Info-TTb-BS-HYH">
-            <h5>Full Name</h5>
+            <h5>Full Name </h5>
           </div>
           <div className="Info-TTb-BS-HYH">
             <p>{fullName}</p>

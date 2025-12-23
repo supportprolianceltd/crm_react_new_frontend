@@ -1,7 +1,24 @@
 import React from "react";
 import { PencilIcon } from "@heroicons/react/24/outline";
 
-const CultureInfo = () => {
+const CultureInfo = ({ clientData, carePlan = null, loading = false }) => {
+  if (loading) {
+    return (
+      <div className="Info-Palt">
+        <div className="Info-Palt-Top">
+          <h3>Culture Value and Identity</h3>
+        </div>
+        <div className="Info-Palt-Main">
+          <p>Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // console.log("carePlan")
+  // console.log(carePlan)
+  // console.log("carePlan")
+
   return (
     <div className="Info-Palt">
       <div className="Info-Palt-Top">
@@ -14,7 +31,7 @@ const CultureInfo = () => {
             <h5>Cultural & Religious Background</h5>
           </div>
           <div className="Info-TTb-BS-HYH">
-            <p>Christain</p>
+            <p>{carePlan?.cultureValues?.religiousBackground || "N/A"}</p>
           </div>
         </div>
 
@@ -23,7 +40,7 @@ const CultureInfo = () => {
             <h5>Ethnic Group</h5>
           </div>
           <div className="Info-TTb-BS-HYH">
-            <p>White British</p>
+            <p>{carePlan?.cultureValues?.ethnicGroup || "N/A"}</p>
           </div>
         </div>
       </div>
@@ -34,7 +51,7 @@ const CultureInfo = () => {
             Does the client require any specific religious or cultural
             accommodations?
           </p>
-          <h4>No he doesn’t</h4>
+          <h4>{carePlan?.cultureValues?.culturalAccommodation || "N/A"}</h4>
         </div>
       </div>
 
@@ -43,7 +60,7 @@ const CultureInfo = () => {
           <h3>Sexuality</h3>
           <div className="JUH-PART">
             <p>What best describes their sexuality?</p>
-            <h4>Straight</h4>
+            <h4>{carePlan?.cultureValues?.sexualityandRelationshipPreferences || "N/A"}</h4>
           </div>
           <div className="JUH-PART">
             <p>
@@ -51,8 +68,7 @@ const CultureInfo = () => {
               needs?
             </p>
             <h4>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy
+              {carePlan?.cultureValues?.sexImpartingCareNeeds || "N/A"}
             </h4>
           </div>
         </div>

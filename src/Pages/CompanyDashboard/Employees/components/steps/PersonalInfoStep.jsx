@@ -769,7 +769,7 @@ const PersonalInfoStep = ({
         )}
 
         {/* Send Credentials Checkbox */}
-        <div className="checkbox-wrapper">
+        {/* <div className="checkbox-wrapper">
           <CheckboxGroup
             label=""
             options={[
@@ -783,7 +783,7 @@ const PersonalInfoStep = ({
             multiple={false}
             row={true}
           />
-        </div>
+        </div> */}
 
         {/* Password Strength Indicator */}
         {formData.password && (

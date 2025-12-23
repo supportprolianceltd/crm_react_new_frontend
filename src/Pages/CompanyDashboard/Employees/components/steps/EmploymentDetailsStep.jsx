@@ -188,10 +188,16 @@ export default function EmploymentDetailsStep({
           onChange={handleChange}
         />
 
-        <SelectField
+        {/* <SelectField
           label="Department"
           name="department"
           options={["Health", "Finance", "Admin", "Operations", "IT", "HR"]}
+          value={formData.department || ""}
+          onChange={handleChange}
+        /> */}
+         <InputField
+          label="Department"
+          name="department"
           value={formData.department || ""}
           onChange={handleChange}
         />

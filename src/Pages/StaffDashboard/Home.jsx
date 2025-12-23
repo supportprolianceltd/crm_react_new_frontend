@@ -378,7 +378,7 @@ const Home = ({ onMessageClick }) => {
       </div>
 
       <div className="RegAveTrav-Sec">
-        {/* <div className="RegAveTrav-Card Gen-Boxshadow">
+        <div className="RegAveTrav-Card Gen-Boxshadow">
           <div className="OVG-Header">
             <div className="OVG-Header-L">
               <h3>Recent Activities</h3>
@@ -469,7 +469,7 @@ const Home = ({ onMessageClick }) => {
               </div>
             </Link>
           </div>
-        </div> */}
+        </div>
         {/* <div className="RegAveTrav-Card"></div> */}
       </div>
     </div>

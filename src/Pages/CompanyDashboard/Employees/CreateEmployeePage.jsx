@@ -1110,8 +1110,8 @@ export default function CreateEmployeePage() {
           postcode: formData.postalCode,
           address: formData.address,
         };
-        autoAssignCarerToCluster(assignPayload).catch(error => {
-          console.error('Auto-assign failed:', error);
+        autoAssignCarerToCluster(assignPayload).catch((error) => {
+          console.error("Auto-assign failed:", error);
         });
         // Update job application status if applicantId exists
         if (applicantId) {
@@ -1221,8 +1221,14 @@ export default function CreateEmployeePage() {
                 work_email: formData.workEmail,
                 employment_type: formData.employmentType,
                 employment_start_date: formData.employmentStartDate,
-                employment_end_date: formData.employmentEndDate,
-                probation_end_date: formData.probationEndDate,
+                employment_end_date:
+                  formData.employmentEndDate === ""
+                    ? null
+                    : formData.employmentEndDate,
+                probation_end_date:
+                  formData.probationEndDate === ""
+                    ? null
+                    : formData.probationEndDate,
                 line_manager: formData.lineManager,
                 currency: formData.salaryCurrency,
                 salary: formData.salary,

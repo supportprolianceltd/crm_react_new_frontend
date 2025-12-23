@@ -25,43 +25,50 @@ export default function EmploymentDetailsStep({
   handlePhoneChange,
 }) {
   // Phone country code hook
-  const { options: phoneCodeOptions, loading: phoneCodeLoading } = usePhoneCountryCode();
+  const { options: phoneCodeOptions, loading: phoneCodeLoading } =
+    usePhoneCountryCode();
 
   const [showLegalWork, setShowLegalWork] = useState(false);
 
   function sanitizeFileName(name) {
     return name
-      .replace(/[^a-zA-Z0-9._-]/g, '_')  // Replace any char that's not letter, number, dot, underscore, hyphen with _
-      .replace(/_{2,}/g, '_')           // Replace multiple _ with single
-      .replace(/^_+|_+$/g, '');         // Remove leading/trailing _
+      .replace(/[^a-zA-Z0-9._-]/g, "_") // Replace any char that's not letter, number, dot, underscore, hyphen with _
+      .replace(/_{2,}/g, "_") // Replace multiple _ with single
+      .replace(/^_+|_+$/g, ""); // Remove leading/trailing _
   }
 
   const handleSanitizedRightToWorkFileChange = (file) => {
-    if (file && typeof handleRightToWorkFileChange === 'function') {
+    if (file && typeof handleRightToWorkFileChange === "function") {
       const sanitizedName = sanitizeFileName(file.name);
-      const sanitizedFile = new File([file], sanitizedName, { type: file.type });
+      const sanitizedFile = new File([file], sanitizedName, {
+        type: file.type,
+      });
       handleRightToWorkFileChange(sanitizedFile);
-    } else if (typeof handleRightToWorkFileChange === 'function') {
+    } else if (typeof handleRightToWorkFileChange === "function") {
       handleRightToWorkFileChange(file);
     }
   };
 
   const handleSanitizedRightToRentFileChange = (file) => {
-    if (file && typeof handleRightToRentFileChange === 'function') {
+    if (file && typeof handleRightToRentFileChange === "function") {
       const sanitizedName = sanitizeFileName(file.name);
-      const sanitizedFile = new File([file], sanitizedName, { type: file.type });
+      const sanitizedFile = new File([file], sanitizedName, {
+        type: file.type,
+      });
       handleRightToRentFileChange(sanitizedFile);
-    } else if (typeof handleRightToRentFileChange === 'function') {
+    } else if (typeof handleRightToRentFileChange === "function") {
       handleRightToRentFileChange(file);
     }
   };
 
   const handleSanitizedInsuranceFileChange = (file) => {
-    if (file && typeof handleInsuranceFileChange === 'function') {
+    if (file && typeof handleInsuranceFileChange === "function") {
       const sanitizedName = sanitizeFileName(file.name);
-      const sanitizedFile = new File([file], sanitizedName, { type: file.type });
+      const sanitizedFile = new File([file], sanitizedName, {
+        type: file.type,
+      });
       handleInsuranceFileChange(sanitizedFile);
-    } else if (typeof handleInsuranceFileChange === 'function') {
+    } else if (typeof handleInsuranceFileChange === "function") {
       handleInsuranceFileChange(file);
     }
   };
@@ -197,10 +204,10 @@ export default function EmploymentDetailsStep({
         />
 
         <InputField
-           label="Line Manager (Team Lead)"
+          label="Line Manager (Team Lead)"
           name="lineManager"
           value={formData.lineManager || ""}
-          onChange={handleChange}          
+          onChange={handleChange}
         />
 
         <InputField
@@ -233,6 +240,7 @@ export default function EmploymentDetailsStep({
             value={formData.employmentEndDate || ""}
             onChange={handleChange}
             min={disablePastDates()}
+            placeholder=""
           />
         </div>
 
@@ -243,6 +251,7 @@ export default function EmploymentDetailsStep({
           value={formData.probationEndDate || ""}
           onChange={handleChange}
           min={disablePastDates()}
+          placeholder=""
         />
 
         <div className="salary-container GHuh-Form-Input">

@@ -210,7 +210,9 @@ const EmployeeDetailsView = ({
 
   useEffect(() => {
     if (employee) {
-      const source = (allEmployees && allEmployees.find((e) => e.id === employee.id)) || employee;
+      const source =
+        (allEmployees && allEmployees.find((e) => e.id === employee.id)) ||
+        employee;
       setProfileCompletion(source.profile_completion_percentage || 0);
       setProfilePhotoPreview(source.profile?.profile_image_url || null);
       setProfilePhotoRemoved(false);
@@ -306,10 +308,8 @@ const EmployeeDetailsView = ({
           source.profile?.Right_to_Work_file_url || ""
         ).replace(/[\?]$/, ""),
         rightToWorkFilePreview:
-          (source.profile?.Right_to_Work_file_url || "").replace(
-            /[\?]$/,
-            ""
-          ) || null,
+          (source.profile?.Right_to_Work_file_url || "").replace(/[\?]$/, "") ||
+          null,
         countryOfIssue: source.profile?.Right_to_Work_country_of_issue || "",
         workRestrictions: source.profile?.Right_to_Work_restrictions || "",
         legalVerifications:
@@ -467,16 +467,14 @@ const EmployeeDetailsView = ({
             selections.push("recruitment");
           if (source.profile?.system_access_training)
             selections.push("training");
-          if (source.profile?.system_access_finance)
-            selections.push("finance");
+          if (source.profile?.system_access_finance) selections.push("finance");
           if (source.profile?.system_access_compliance)
             selections.push("compliance");
           if (source.profile?.system_access_asset_management)
-            selections.push("asset_management");
+            selections.push("Assets Management");
           return selections;
         })(),
-        systemAdminAccess:
-          source.profile?.system_access_co_superadmin || false,
+        systemAdminAccess: source.profile?.system_access_co_superadmin || false,
         systemAdminAccessSelections: (() => {
           const selections = [];
           if (source.profile?.system_access_co_superadmin)
@@ -626,7 +624,7 @@ const EmployeeDetailsView = ({
             updated[arrayField] = updatedArray;
           }
         }
-      } else if (section === null && field === 'role') {
+      } else if (section === null && field === "role") {
         updated.role = value;
       } else {
         updated[field] = value;
@@ -1778,7 +1776,8 @@ const EmployeeDetailsView = ({
                 formData.isSyncWithRoster;
             // Check manage_permission
             if (formData.manage_permission !== employee.manage_permission)
-              permissionsTopLevelPayload.manage_permission = formData.manage_permission;
+              permissionsTopLevelPayload.manage_permission =
+                formData.manage_permission;
           }
           const permissionsUpdatePayload = {};
           if (Object.keys(permissionsPayload).length > 0) {
@@ -2647,7 +2646,7 @@ const EmployeeDetailsView = ({
 
         <div className="main-layout">
           {renderSidebar()}
-          
+
           <div className="right-content">
             {renderProfileCard()}
             {renderSectionContent()}
@@ -2677,7 +2676,8 @@ const EmployeeDetailsView = ({
     "Bank Details",
     "Proof of Address",
     "Driving License & DBS Verification",
-    ...(userRole === "root-admin" || (userRole === "co-admin" && user.manage_permission)
+    ...(userRole === "root-admin" ||
+    (userRole === "co-admin" && user.manage_permission)
       ? ["Permissions"]
       : []),
     `${isProfileView ? "My" : "Employee"} Documents`,

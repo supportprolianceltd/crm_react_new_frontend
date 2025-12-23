@@ -16,7 +16,6 @@ const PermissionsStep = ({
   isEditing,
   handleEditToggle,
   handleInputChange,
-  
 }) => {
   if (!formData) return null;
 
@@ -28,7 +27,11 @@ const PermissionsStep = ({
     if (!Array.isArray(systemAccessOptions)) return;
     // Only auto-set if not editing and no selections yet
     if (isEditing && isEditing.permissions) return;
-    if (formData.systemAccessSelections && formData.systemAccessSelections.length > 0) return;
+    if (
+      formData.systemAccessSelections &&
+      formData.systemAccessSelections.length > 0
+    )
+      return;
     let selections = [];
     if (isViewedUserRootAdmin) {
       selections = systemAccessOptions.map((opt) => opt.value);
@@ -42,12 +45,14 @@ const PermissionsStep = ({
         .map((opt) => opt.value);
     }
     // Always update selections, even if empty
-    handleInputChange(
-      "permissions",
-      "systemAccessSelections",
-      selections
-    );
-  }, [isViewedUserRootAdmin, formData.profile, formData.systemAccessSelections, isEditing, handleInputChange]);
+    handleInputChange("permissions", "systemAccessSelections", selections);
+  }, [
+    isViewedUserRootAdmin,
+    formData.profile,
+    formData.systemAccessSelections,
+    isEditing,
+    handleInputChange,
+  ]);
 
   // Set role to "co-admin" when Co-Admin is selected in System Admin Access
 
@@ -102,13 +107,9 @@ const PermissionsStep = ({
                   if (formData.profile) {
                     const hrChecked = selectedValues.includes("hr");
                     console.log("Force HR update", hrChecked);
-                    handleInputChange(
-                      "profile",
-                      "system_access_hr",
-                      hrChecked
-                    );
+                    handleInputChange("profile", "system_access_hr", hrChecked);
                     // Also update all other keys as before
-                    systemAccessOptions.forEach(opt => {
+                    systemAccessOptions.forEach((opt) => {
                       if (opt.value !== "hr") {
                         const checked = selectedValues.includes(opt.value);
                         handleInputChange(
@@ -127,11 +128,11 @@ const PermissionsStep = ({
                 {formData.systemAccessSelections &&
                 formData.systemAccessSelections.length > 0
                   ? formData.systemAccessSelections
-                      // .map((item) =>
-                        // item?.trim() === "hr"
-                          // ? "HR"
-                          // : capitalizeFirstLetter(item?.trim() || "")
-                      // )
+                      .map((item) =>
+                        item?.trim() === "hr"
+                          ? "HR"
+                          : capitalizeFirstLetter(item?.trim() || "")
+                      )
                       .join(", ")
                   : "-"}
               </span>
@@ -171,7 +172,9 @@ const PermissionsStep = ({
               {isEditing.permissions ? (
                 <ToggleButton
                   isOn={formData.manage_permission || false}
-                  onToggle={(isOn) => handleInputChange("permissions", "manage_permission", isOn)}
+                  onToggle={(isOn) =>
+                    handleInputChange("permissions", "manage_permission", isOn)
+                  }
                 />
               ) : (
                 <span>{formData.manage_permission ? "Yes" : "No"}</span>
@@ -189,8 +192,8 @@ const PermissionsStep = ({
           if (!lastUpdated) return null;
           return (
             <div className="last-edited-by">
-              Last Edited By : {lastUpdated.first_name} {" "}
-              {lastUpdated.last_name} - {lastUpdated.email}
+              Last Edited By : {lastUpdated.first_name} {lastUpdated.last_name}{" "}
+              - {lastUpdated.email}
             </div>
           );
         })()}

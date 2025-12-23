@@ -2903,7 +2903,7 @@ const EmployeeDetailsPage = () => {
   };
 
   const sections = [
-    "Basic Informtion",
+    "Basic Information",
     "Employment Details",
     "Education Details",
     "Skills",

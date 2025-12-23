@@ -601,7 +601,7 @@ const Schedule = () => {
           activeJob.company_address ||
           activeJob.job_location ||
           "TBD";
-    const dashboardLink = `${WEB_PAGE__URL}application-dashboard/${
+    const dashboardLink = `${WEB_PAGE__URL}/application-dashboard/${
       activeJob.job_application_code
     }/${encodeURIComponent(applicant.email)}/${activeJob.unique_link}`;
 
